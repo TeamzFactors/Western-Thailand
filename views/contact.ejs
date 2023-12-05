@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT PAGE</title>
+
+    <!-- เรียกใช้ Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <!-- เรียกใช้ icon ต่างๆ -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script src="https://kit.fontawesome.com/fb44135de2.js" crossorigin="anonymous"></script>
+
+    <!-- แสดง icon บน tab browser -->
+    <link rel="icon" type="image/x-icon" href="/img/first/tiewtok.ico">
+
+    <!-- เรียกใช้ smtp.js -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!-- เรียกใช้ Sweetalert 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- เรียกใช้ไฟล์ css ใน folder -->
+    <link rel="stylesheet" href="/css/style0.css">
+    <link rel="stylesheet" href="/css/style1.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan&display=swap" rel="stylesheet">
+</head>
+<!-- font on Body -->
+<body style="font-family: 'Kodchasan', sans-serif;">
+
+    <!-- navbar -->
+  <div class="p-3 text-white" style="background-color: #0f0c3a;">
+    <div class="flexMain">
+      <div class="flex2 text-center">
+        <div><strong>Website introducing tourist attractions in the western region of Thailand.</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flexMain sticky-top" style="background-color: rgb(255, 255, 255); border-bottom: #0f0c3a; border-bottom-style: solid; border-bottom-width: 0.8px;">
+    <div class="flex2">
+      <button class="btn siteLink" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" 
+      aria-controls="offcanvasExample" >
+        <i class="fas fa-bars me-2" style="color: #0f0c3a;"></i>MENU
+      </button>
+    </div>
+    <div class="flex3 text-center" id="siteBrand">
+      <a href="/home" style="text-decoration: none; color: #0f0c3a;">
+          <h2>TIEWTOK</h2></a>
+    </div>
+    <div class="flex2 text-end d-md-block ">
+      <% if (userLoggedIn) { %>
+        <a href="/login"><button class="whiteLink siteLink">Hi, <%= currentUser.Username %></button></a>
+        <a href="/logout"><button class="blackLink siteLink">LOG OUT</button></a>
+      <% } else { %>
+        <a href="/register"><button class="whiteLink siteLink">REGISTER</button></a>
+        <a href="/logins"><button class="blackLink siteLink">LOGIN</button></a>
+      <% } %>
+      </div>
+  </div>
+  
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header" style="margin-top: 20px; margin-left: 20px; margin-right: 30px;">
+      <a class="offcanvas-title" id="offcanvasExampleLabel"><img src="/img/first/logo.png" class="offcanvas-title" id="offcanvasExampleLabel" width="80px" height="80px" style="border-radius: 60px;"></a>
+      <button type="button" class="btn-close text-reset" style="font-size:large" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <a href="/home" class="btn nav-menu-item text-start" style="font-weight:bold;"><i class="me-3"></i>Home</a>
+
+
+            <a class="btn nav-menu-item text-start" style="padding-left: 47px; font-weight:bold;" data-bs-toggle="collapse" 
+          href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">History <i class="fa-solid fa-caret-down"></i></a>
+
+         <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="History_Kan">
+              ●  Kanchanaburi
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="History_Tak">
+              ●  Tak
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="History_Prac">
+              ●  Prachuap Khiri Khan
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="History_Phet">
+              ●  Phetchaburi
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="History_Rat">
+              ●  Ratchaburi
+            </a>
+         </div>
+
+          <a class="btn nav-menu-item text-start" style="padding-left: 47px; font-weight:bold;" data-bs-toggle="collapse" 
+         href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">Tourist Attractions <i class="fa-solid fa-caret-down"></i></a>
+
+          <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="Travel_Kan">
+              ●  Kanchanaburi
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="Travel_Tak">
+              ●  Tak
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="Travel_Prac">
+              ●  Prachuap Khiri Khan
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="Travel_Phet">
+              ●  Phetchaburi
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="Travel_Rat">
+              ●  Ratchaburi
+            </a>
+          </div>
+
+            <a href="/product" class="btn nav-menu-item text-start" style="font-weight:bold;"><i class="me-3"></i>Products</a>
+            <a href="/contact" class="btn nav-menu-item text-start" style="font-weight:bold;"><i class="me-3"></i>Contact Us</a>
+    </div>
+  </div>
+  <!-- navbar -->
+
+    <!-- Background Image & Text -->
+    <div class="col-md">
+        <div id="bg2">
+            <img src="/img/contact/west.jpg" class="img-fluid" style="width: 100%; filter: blur(3px); -webkit-filter: blur(3px);" alt="west">
+            <div class="container-fluid bg-text text-light"><h1 style="font-size: 7.5vw;">CONTACT</h1></div>
+        </div>
+    </div>
+
+    <div class="space1"></div>
+
+    <!-- Let's Get in Touch -->
+    <div class="container col-md-8">
+            <div class="contact1">
+                <i class="fa fa-telegram"></i>
+                    <b><h1 style="font-size: 28pt;">Let's Get in Touch</h1></b>
+                    <p style="font-size: 17pt;">Thank you for using our website. If you have any problem or question,
+                    you can tell us by fill up the form or contact us to get the right information from our staff.</p>
+                </div>
+        </div>
+
+        <div class="space1"></div>
+
+    <!-- Contact Form -->
+        <div class="container col-md-9">
+            <div class="form">
+              <div class="contact-info">
+                <h3 class="title">Contact Info</h3>
+                <p class="text">
+                  Fill up the form and our Team will get back to you within 72 hours or contact us by the contact information below.
+                </p>
+      
+                <div class="info">
+                  <div class="information">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <p style="color: black; padding-top: 17px;">Bangkok, Thailand</p>
+                  </div>
+                  <div class="information">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p style="color: black; padding-top: 17px;">Westernthailand.at@gmail.com</p>
+                  </div>
+                  <div class="information">
+                    <i class="fa-solid fa-phone"></i>
+                    <p style="color: black; padding-top: 17px;">012-345-6789</p>
+                  </div>
+                  <div class="information">
+                    <i class="fa-solid fa-globe"></i>
+                    <p style="color: black; padding-top: 17px;">Western-of-Thailand</p>
+                  </div>
+                </div>
+      
+                <div class="social-media">
+                  <p>Connect with us :</p>
+                  <div class="social-icons">
+                    <a href="https://www.facebook.com/AmazingThailand/?locale=th_TH" target="_blank" style="background-color: rgb(67, 121, 246);">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCL6JQ3MOkKSfmeqw38j809w" target="_blank" style="background-color: rgb(250, 84, 84);">
+                        <i class="fab fa-youtube"></i>
+                      </a>
+                    <a href="https://twitter.com/AmazingThailand" target="_blank" style="background-color: rgb(4, 169, 169);">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/tourismthailand/" target="_blank" style="background-color: rgb(247, 84, 171);">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="contact-form">
+                <span class="circle one"></span>
+                <span class="circle two"></span>
+      
+                <form action="" id="validationForm">
+                  <h3 class="title">Contact us</h3>
+                  <div class="input-container">
+                    <input type="text" id="name" class="input" />
+                    <label for="Name">Your Name</label>
+                    <span>Your Name</span>
+                  </div>
+                  <div class="input-container">
+                    <input type="email" id="email" class="input" />
+                    <label for="Email">Email Address</label>
+                    <span>Email Address</span>
+                  </div>
+                  <div class="input-container">
+                    <input type="tel" id="phone" class="input" />
+                    <label for="Phone">Phone Number</label>
+                    <span>Phone Number</span>
+                  </div>
+                  <div class="input-container">
+                    <input type="text" id="subject" class="input" />
+                    <label for="subject">Subject</label>
+                    <span>Subject</span>
+                  </div>
+                  <div class="input-container textarea">
+                    <textarea name="message" id="message" class="input"></textarea>
+                    <label for="message">Message</label>
+                    <span>Message</span>
+                  </div>
+                    <input type="submit" value="Send" class="btn1" onclick="validateForm(event)" />
+                    <input type="reset" value="Reset" class="btn2" />
+                </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="space1"></div><br>
+
+          <!-- FAQ -->
+          <section>
+          <div class="container col-md-8">
+                <div class="contact2">
+                    <i class="fa-solid fa-circle-question"></i>
+                        <b><h1 style="font-size: 28pt;">Frequently Asked Questions</h1></b><br>
+                    </div>
+                            <div class="faq">
+                                <div class="question">
+                                    <h3>01 - ประเทศไทยส่วนภาคตะวันตกมีกี่จังหวัด</h3>
+                                    <svg width="15" height="10" viewBox="0 0 42 25">
+                                        <path
+                                        d ="M3 3L21 21L39 3"
+                                        stroke="ิwhite"
+                                        stroke-width="7"
+                                        stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                                <div class="answer">
+                                    <p>
+                                        โดยรวมแล้วมีทั้งหมด 5 จังหวัด ได้แก่ จังหวัดกาญจนบุรี จังหวัดเพชรบุรี จังหวัดตาก จังหวัดราชบุรี และจังหวัดประจวบคีรีขันธ์
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="faq">
+                                <div class="question">
+                            <h3>02 - ทำไมถึงเลือกทำเว็บไซต์แนะนำภาคตะวันตก</h3>
+                            <svg width="15" height="10" viewBox="0 0 42 25">
+                              <path
+                              d ="M3 3L21 21L39 3"
+                              stroke="ิwhite"
+                              stroke-width="7"
+                              stroke-linecap="round" />
+                          </svg>
+                        </div>
+                        <div class="answer">
+                            <p>
+                                เพราะทางเราอยากนำเสนอจังหวัดที่ไม่ค่อยมีใครสนใจ รวมถึงแสดงให้เห็นถึงสถานที่ท่องเที่ยวในภาคตะวันตก ประกอบกับของดีต่าง ๆ ที่น่าเชื่อถือ
+                                อย่างสินค้าที่ระลึกหรือโดดเด่นในแต่ละจังหวัด คำขวัญ ประวัติความเป็นมา และอื่น ๆ ที่ชวนให้ตื่นตาและน่าดึงดูดเป็นอย่างมาก
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq">
+                      <div class="question">
+                          <h3>03 - เขตภูมิลักษณ์ภาคตะวันตก</h3>
+                          <svg width="15" height="10" viewBox="0 0 42 25">
+                            <path
+                            d ="M3 3L21 21L39 3"
+                            stroke="ิwhite"
+                            stroke-width="7"
+                            stroke-linecap="round" />
+                        </svg>
+                      </div>
+                      <div class="answer">
+                          <p>
+                            ภาคนี้มีเนื้อที่ทั้งหมดประมาณ 53,679.02 ตารางกิโลเมตร หรือประมาณร้อยละ 10.46 ของพื้นที่ทั้งประเทศ โดยมีจังหวัดกาญจนบุรีมีเนื้อที่มากที่สุด
+                            ส่วนจังหวัดราชบุรีมีเนื้อที่น้อยที่สุด แต่มีประชากรมากที่สุด ภาคตะวันตกเป็นภูมิภาคย่อยทางตะวันตกของประเทศ โดยยังถือว่าเป็นส่วนหนึ่งของภาคกลาง 
+                            (ภาคกลางเดิม) แม้ว่าจะจัดรวมอยู่ใน "ภาคตะวันตก" แต่ในภูมิภาคนี้ยังมีความหลากหลาย ตามลักษณะทางภูมิศาสตร์ซึ่งแตกต่างกันค่อนข้างมาก
+                          </p>
+                      </div>
+                  </div>
+
+                    <div class="faq">
+                        <div class="question">
+                            <h3>04 - ที่ตั้งสมบูรณ์ทางภาคตะวันตก</h3>
+                            <svg width="15" height="10" viewBox="0 0 42 25">
+                                <path
+                                d ="M3 3L21 21L39 3"
+                                stroke="ิwhite"
+                                stroke-width="7"
+                                stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="answer">
+                            <p>
+                              - ทิศเหนือ : อยู่ที่ละติจูด 17 องศา 45 ลิปดาเหนือ<br>
+                              - ทิศใต้ : อยู่ที่ละติจูด 10 องศา 59 ลิปดาเหนือ<br>
+                              - ทิศตะวันออก : อยู่ที่ลองจิจูด 100 องศา 06 ลิปดาตะวันออก<br>
+                              - ทิศตะวันตก : อยู่ที่ลองจิจูด 97 องศา 40 ลิปดาตะวันออก    
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq">
+                      <div class="question">
+                          <h3>05 - ที่ตั้งสัมพันธ์ทางภาคตะวันตก</h3>
+                          <svg width="15" height="10" viewBox="0 0 42 25">
+                              <path
+                              d ="M3 3L21 21L39 3"
+                              stroke="ิwhite"
+                              stroke-width="7"
+                              stroke-linecap="round" />
+                          </svg>
+                      </div>
+                      <div class="answer">
+                          <p>
+                            - ทิศเหนือ : ติดต่อกับภาคเหนือที่จังหวัดแม่ฮ่องสอน เชียงใหม่ ลำพูนและลำปาง<br>
+                            - ทิศใต้ : ติดต่อกับภาคใต้ที่จังหวัดชุมพร<br>
+                            - ทิศตะวันออก : ติดต่อกับภาคกลางที่จังหวัดสมุทรสงคราม สมุทรสาคร นครปฐม
+                              สุพรรณบุรี อุทัยธานี กำแพงเพชร นครสวรรค์ และอ่าวไทย<br>
+                            - ทิศตะวันตก : ติดต่อกับประเทศสภาพพม่า โดยมีเทือกเขาถนนธงชัย และ
+                            เทือกเขาตะนาวศรีเป็นพรมแดน
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="faq">
+                    <div class="question">
+                        <h3>06 - ลักษณะภูมิอากาศของภาคตะวันตก</h3>
+                        <svg width="15" height="10" viewBox="0 0 42 25">
+                            <path
+                            d ="M3 3L21 21L39 3"
+                            stroke="ิwhite"
+                            stroke-width="7"
+                            stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="answer">
+                        <p>
+                          ลักษณะภูมิอากาศคล้ายคลึงกับภาคเหนือตอนล่าง และภาคกลางด้านตะวันตก แต่จะมีความแห้งแล้งมากกว่าเพราะมีเทือกเขาสูงเป็นแนวกำบังลม 
+                          ทำให้ลักษณะภูมิอากาศในฤดูร้อนและฤดูหนาวแตกต่างกันอย่างชัดเจน เนื่องจากแนวเทือกเขาขวางกั้นทิศทางลมมรสุมตะวันตกเฉียงใต้ ก่อให้เกิดเป็นบริเวณเขตเงาฝน 
+                          หรือพื้นที่อับลม ซึ่งฝนจะตกด้านตะวันตกของเทือกเขามากกว่าด้านตะวันออก  
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                  <div class="question">
+                      <h3>07 - ลักษณะภูมิประเทศของภาคตะวันตก</h3>
+                      <svg width="15" height="10" viewBox="0 0 42 25">
+                          <path
+                          d ="M3 3L21 21L39 3"
+                          stroke="ิwhite"
+                          stroke-width="7"
+                          stroke-linecap="round" />
+                      </svg>
+                  </div>
+                  <div class="answer">
+                      <p>
+                        ลักษณะภูมิประเทศของภาคตะวันตก แบ่งได้เป็น 2 เขตใหญ่ ๆ คือ<br>
+                        1. เขตเทือกเขา ได้แก่ บริเวณเทือกเขา และที่สูงด้านตะวันตกของภาค โดยทอดตัวอยู่ในแนวเหนือ-ใต้ ตั้งแต่จังหวัดตากจนถึงประจวบคีรีขันธ์ 
+                        เป็นพรมแดนธรรมชาติที่กั้นระหว่างไทยกับพม่า ได้แก่ เทือกเขาถนนธงชัย และเทือกเขาตะนาวศรี<br>
+                        2. เขตที่ราบ ได้แก่ บริเวณที่อยู่ระหว่างเทือกเขากับที่ราบภาคกลาง และอ่าวไทย โดยมีอาณาบริเวณตั้งแต่ทางด้านตะวันออกของจังหวัดกาญจนบุรี 
+                        ต่อลงมายังราชบุรี และประจวบคีรีขันธ์ โดยแบ่งได้เป็น 2 เขตย่อย ได้แก่<br>
+                        2.1 เขตที่ราบขั้นบันได เป็นที่ราบที่เกิดจากการสะสมตัวของตะกอน โดยอิทธิพลของแม่น้ำแม่กลอง และแม่น้ำท่าจีนจะลาดเอียงจากทางด้านตะวันตก
+                        มาจนจดกับที่ราบลุ่มภาคกลางและอ่าวไทย ที่ราบนี้จะอยู่ในเขตจังหวัดกาญจนบุรี และราชบุรี<br>
+                        2.2 เขตที่ราบชายฝั่งทะเล บริเวณนี้ตั้งแต่ตอนเหนือของจังหวัดเพชรบุรีเลียบชายฝั่งทะเลลงไปจนสุดเขตจังหวัดประจวบคีรีขันธ์ เป็นที่ราบแคบ ๆ ยาว ๆ 
+                        เกิดจากการกระทำของคลื่น ซึ่งเป็นที่ราบชายฝั่งทะเลยกตัว
+                      </p>
+                  </div>
+              </div>
+
+                <div class="faq">
+                  <div class="question">
+                      <h3>08 - ช่วงเวลาใดที่เหมาะสมสำหรับการท่องเที่ยว</h3>
+                      <svg width="15" height="10" viewBox="0 0 42 25">
+                        <path
+                        d ="M3 3L21 21L39 3"
+                        stroke="ิwhite"
+                        stroke-width="7"
+                        stroke-linecap="round" />
+                    </svg>
+                  </div>
+                  <div class="answer">
+                      <p>
+                          ฤดูกาลที่ดีที่สุดสำหรับการท่องเที่ยวประเทศไทยคือช่วงฤดูหนาวและฤดูร้อน โดยช่วงเวลาท่องเที่ยวที่นิยมมากที่สุดคือเดือนพฤศจิกายน-เมษายน 
+                          ซึ่งประเทศไทยเป็นประเทศที่มีกิจกรรมและเทศกาลหรืองานประเพณีที่น่าสนใจต่าง ๆ ตลอดทั้งปีทั่วประเทศ และแหล่งท่องเที่ยวทางธรรมชาติต่าง ๆ 
+                          ก็สามารถหมุนเวียนท่องเที่ยวได้ตลอดทั้งปี
+                      </p>
+                  </div>
+              </div>
+
+              <div class="faq">
+                <div class="question">
+                    <h3>09 - กิจกรรมที่น่าสนใจในประเทศไทยมีอะไรบ้าง</h3>
+                    <svg width="15" height="10" viewBox="0 0 42 25">
+                        <path
+                        d ="M3 3L21 21L39 3"
+                        stroke="ิwhite"
+                        stroke-width="7"
+                        stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="answer">
+                    <p>
+                      กิจกรรมน่าสนใจและกีฬาชนิดต่าง ๆ ที่นักท่องเที่ยวสามารถเลือกทำได้ เช่น ช็อปปิ้ง นวดแผนไทย สปา ดำน้ำตื้นและดำน้ำลึก พายเรือคายัคและแคนู 
+                      เดินป่า ปีนหน้าผา ตีกอล์ฟ เรียนมวยไทย เรียนทำอาหารไทย ล่องเรือ ล่องแพ ล่องแก่ง แข่งรถ ยิงธนู ยิงปืน ขี่จักรยาน 
+                      ร่อนร่ม เล่นสกี เล่นเรือใบ ว่ายน้ำ เล่นบานาน่าโบ้ต นั่งบอลลูน นั่งเฮลิคอปเตอร์ นั่งเครื่องบิน กระโดดร่ม บันจีจัมป์ สกายไดฟ์ และอื่น ๆ เป็นต้น
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="question">
+                    <h3>10 - หมายเลขโทรศัพท์สำคัญในประเทศไทย</h3>
+                    <svg width="15" height="10" viewBox="0 0 42 25">
+                        <path
+                        d ="M3 3L21 21L39 3"
+                        stroke="ิwhite"
+                        stroke-width="7"
+                        stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="answer">
+                    <p>
+                        <b>กรณีฉุกเฉิน กรุณาติดต่อ</b><br>
+                        - ตำรวจ, รถพยาบาล, รถดับเพลิง โทร 191<br>
+                        - ตำรวจท่องเที่ยว โทร 1155<br>
+                        - ศูนย์ข้อมูลท่องเที่ยว การท่องเที่ยวแห่งประเทศไทย โทร 1672<br>
+                        - บริษัท ขนส่ง จำกัด โทร 1490<br>
+                        - การรถไฟแห่งประเทศไทย โทร 1690
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="space1"></div>
+    
+    <!-- Each Provincial Office -->
+    <div class="container col-md-12">
+        <div class="contact3">
+            <i class="fa-solid fa-info-circle"></i>
+                <b><h1 style="font-size: 28pt;">Each Provincial Office</h1></b><br><br>
+          </div>
+          <div class="card-container">
+            <div class="card">
+                <div class="card-image"></div>
+                <div class="card-title">Kanchanaburi</div>
+                <div class="card-text">
+                  <p>
+                    <b>ททท. สำนักงานกาญจนบุรี</b><br><br>
+                    พื้นที่รับผิดชอบ : กาญจนบุรี<br><br>
+                    call : 0 3451 1200 or 0 3451 2500<br><br>
+                    mail : tatkan@tat.or.th<br><br>
+                    website : <a href="http://www.tourismthailand.org/kanchanaburi" target="_blank" style="text-decoration: none;">kanchanaburi</a><br><br>
+                    <!-- Trigger/Open The Modal -->
+                    <button id="myBtn1" class="bg-secondary" onclick="openModal('myModal1')">Map Location</button>
+
+                    <!-- The Modal -->
+                    <div id="myModal1" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span class="close" onclick="closeModal('myModal1')">&times;</span>
+                      <iframe class="maping" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.971802744755!2d99.53092347473003!3d14.019685791035691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e374ba7acc0315%3A0x5179f3a24c8670a1!2z4LiX4LiX4LiXLuC4quC4s-C4meC4seC4geC4h-C4suC4meC4geC4suC4jeC4iOC4meC4muC4uOC4o-C4tQ!5e0!3m2!1sth!2sth!4v1699891346318!5m2!1sth!2sth" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      </div>
+                    </div>
+                  </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image"></div>
+                <div class="card-title">Phetchaburi</div>
+                <div class="card-text">
+                  <p>
+                    <b>ททท. สำนักงานเพชรบุรี</b><br><br>
+                    พื้นที่รับผิดชอบ : เพชรบุรี<br><br>
+                    call : 0 3247 1005-6<br><br>
+                    mail : tatphet@tat.or.th<br><br>
+                    website : <a href="http://www.tourismthailand.org/phetchaburi" target="_blank" style="text-decoration: none;">phetchaburi-of-western</a><br><br>
+                    <button id="myBtn1" class="bg-secondary" onclick="openModal('myModal2')">Map Location</button>
+
+                    <div id="myModal2" class="modal">
+
+                    <div class="modal-content">
+                      <span class="close" onclick="closeModal('myModal2')">&times;</span>
+                      <iframe class="maping" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.8425758661215!2d99.96694717471166!3d12.788728518862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30fd0347e2e4fdef%3A0x1439cb689038a031!2z4LiX4LiX4LiXLuC4quC4s-C4meC4seC4geC4h-C4suC4meC5gOC4nuC4iuC4o-C4muC4uOC4o-C4tQ!5e0!3m2!1sth!2sth!4v1699894811489!5m2!1sth!2sth" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      </div>
+                    </div>
+                  </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image"></div>
+                <div class="card-title">Ratchaburi</div>
+                <div class="card-text">
+                  <p>
+                    <b>ททท. สำนักงานราชบุรี</b><br><br>
+                    พื้นที่รับผิดชอบ : ราชบุรี / นครปฐม<br><br>
+                    call : 0 3291 9176-8<br><br>
+                    mail : tatratchaburi@tat.or.th<br><br>
+                    website : <a href="https://ratchaburi.prd.go.th/th/content/category/index/id/13" target="_blank" style="text-decoration: none;">ratchaburi</a><br><br>
+                    <button id="myBtn1" class="bg-secondary" onclick="openModal('myModal3')">Map Location</button>
+
+                    <div id="myModal3" class="modal">
+
+                    <div class="modal-content">
+                      <span class="close" onclick="closeModal('myModal3')">&times;</span>
+                      <iframe class="maping" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.680350775691!2d99.81251076220006!3d13.525107248006336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e329d60ec4d58b%3A0xc23f7fc4f73fe692!2z4LiX4LiX4LiXLuC4quC4s-C4meC4seC4geC4h-C4suC4meC4o-C4suC4iuC4muC4uOC4o-C4tQ!5e0!3m2!1sth!2sth!4v1699894910328!5m2!1sth!2sth" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      </div>
+                    </div>
+                </p>
+                </div>
+            </div>
+            <div class="card">
+              <div class="card-image"></div>
+              <div class="card-title">Tak</div>
+              <div class="card-text">
+                <p>
+                  <b>ททท. สำนักงานตาก</b><br><br>
+                  พื้นที่รับผิดชอบ : ตาก<br><br>
+                  call : 0 5551 4341-3<br><br>
+                  mail : tattak@tat.or.th<br><br>
+                  website : <a href="http://www.tourismthailand.org/tak" target="_blank" style="text-decoration: none;">tak-of-western-thailand</a><br><br>
+                  <button id="myBtn1" class="bg-secondary" onclick="openModal('myModal4')">Map Location</button>
+
+                  <div id="myModal4" class="modal">
+
+                  <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModal4')">&times;</span>
+                    <iframe class="maping" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3817.7898802247205!2d99.12048317478109!3d16.886285617048173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30ddd9e7fb2c4755%3A0xabe77ff22892cc2b!2z4LiB4Liy4Lij4LiX4LmI4Lit4LiH4LmA4LiX4Li14LmI4Lii4Lin4LmB4Lir4LmI4LiH4Lib4Lij4Liw4LmA4LiX4Lio4LmE4LiX4LiiIOC4quC4s-C4meC4seC4geC4h-C4suC4meC4leC4suC4gQ!5e0!3m2!1sth!2sth!4v1699894958195!5m2!1sth!2sth" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                  </div>
+                </p>
+              </div>
+          </div>
+          <div class="card">
+            <div class="card-image"></div>
+            <div class="card-title">Prachuap</div>
+            <div class="card-text">
+              <p style="font-size: 11pt;">
+                <b>ททท. สำนักงานประจวบคีรีขันธ์</b><br><br>
+                พื้นที่รับผิดชอบ : ประจวบคีรีขันธ์<br><br>
+                call : 0 3251 3885 or 0 3251 3871<br><br>
+                mail : tatprachuap@tat.or.th<br><br>
+                website : <a href="http://www.tourismthailand.org/prachuapkhirikhan" target="_blank" style="text-decoration: none;">prachuap-khiri-khan</a><br><br>
+                <button id="myBtn1" class="bg-secondary" onclick="openModal('myModal5')">Map Location</button>
+
+                <div id="myModal5" class="modal">
+
+                <div class="modal-content">
+                  <span class="close" onclick="closeModal('myModal5')">&times;</span>
+                  <iframe class="maping" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3893.778823742141!2d99.94738857470902!3d12.596823422984935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30fdac6d077aa2c3%3A0x9d88e7b8e2df73d4!2z4LiX4LiX4LiXLiDguKrguLPguJnguLHguIHguIfguLLguJnguJvguKPguLDguIjguKfguJrguITguLXguKPguLXguILguLHguJnguJjguYw!5e0!3m2!1sth!2sth!4v1699895010375!5m2!1sth!2sth" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                </div>
+              </p>
+            </div>
+        </div>
+        <div class="card">
+          <div class="card-image"></div>
+          <div class="card-title">การท่องเที่ยวไทย</div>
+          <div class="card-text">
+            <p style="font-size: 11pt;">
+              <b>ททท. สำนักงานใหญ่</b><br><br>
+              time : จันทร์ - ศุกร์ (8:00 - 17.00 น.)<br><br>
+              call : (66)2 250 5500 or 1672<br><br>
+              mail : center@tat.or.th<br><br>
+              website : <a href="https://www.tat.or.th/th/contact/office#" target="_blank" style="text-decoration: none;">Tourism-Authority</a><br><br>
+              <button id="myBtn1" class="bg-secondary" onclick="openModal('myModal6')">Map Location</button>
+
+              <div id="myModal6" class="modal">
+
+              <div class="modal-content">
+                <span class="close" onclick="closeModal('myModal6')">&times;</span>
+                <iframe class="maping" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.4942130380555!2d100.55528047472583!3d13.749043697358074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29eeecb3fec3d%3A0xb4906a2c98066a18!2z4LiB4Liy4Lij4LiX4LmI4Lit4LiH4LmA4LiX4Li14LmI4Lii4Lin4LmB4Lir4LmI4LiH4Lib4Lij4Liw4LmA4LiX4Lio4LmE4LiX4LiiKFNBKQ!5e0!3m2!1sth!2sth!4v1699895072511!5m2!1sth!2sth" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="space1"></div><br>
+    
+    <!-- Our Team -->
+    <div class="container col-md-12">
+        <div class="contact4">
+            <i class="fa-solid fa-user-circle"></i>
+                <b><h1 style="font-size: 28pt;">Website Development Team</h1></b><br><br>
+          </div>
+            <div class="row justify-content-center">
+              <!-- Column 1-->
+              <div class="column">
+                <div class="card1">
+                  <div class="img-container">
+                    <img src="/img/contact/Yok.jpg" />
+                  </div>
+                  <h3>Pornpawee (Yok)</h3>
+                  <p>Full Stack Developer</p>
+                  <div class="icons">
+                    <a href="https://www.facebook.com/profile.php?id=100007047526762" target="_blank">
+                      <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/y_ylxto/" target="_blank">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Column 2-->
+              <div class="column">
+                <div class="card1">
+                  <div class="img-container">
+                    <img src="img/contact/Benz.jpg" />
+                  </div>
+                  <h3>Warissara (Benz)</h3>
+                  <p>Front-End Developer</p>
+                  <div class="icons">
+                    <a href="https://www.facebook.com/profile.php?id=100004596402647" target="_blank">
+                      <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/benz.wrs/" target="_blank">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Column 3-->
+              <div class="column">
+                <div class="card1">
+                  <div class="img-container">
+                    <img src="/img/contact/Team.jpg" />
+                  </div>
+                  <h3>Sunchai (Team)</h3>
+                  <p>Back-End Developer</p>
+                  <div class="icons">
+                    <a href="https://www.facebook.com/sunchai.trabdee" target="_blank">
+                      <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/sc_teamie/" target="_blank">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    <div class="space1"></div><br>
+    <h6>&copy; Western Thailand</h6>
+
+  <!-- Footer -->
+  <footer class="text-center text-white" style="background-color: #0f0c3a;">
+    <div class="container">
+      <section class="mt-5">
+        <div class="row d-flex pt-3">
+                    <div class="col-md-2">
+                      <hr class="hr-1">
+                      <h5 class="text-uppercase font-weight-bold text-center">
+                        <a href="/home" class="text-white" style="text-decoration: none;">Home</a>
+                      </h5>
+                      <hr class="hr-1">
+                    </div>
+
+                    <div class="col-md-3">
+                      <hr class="hr-1">
+                      <h5 class="text-uppercase font-weight-bold text-center">
+                        <a href="#" class="text-white" style="text-decoration: none;">History</a>
+                      </h5>
+                      <hr class="hr-1">
+                      <h6 class="text-uppercase text-center">
+                        <a href="History_Kan" class="text-white" style="text-decoration: none;">Kanchanaburi</a>
+                        <br>
+                        <br>
+                            <a href="History_Tak" class="text-white" style="text-decoration: none;">Tak</a>
+                        <br>
+                        <br>
+                            <a href="History_Prac" class="text-white" style="text-decoration: none;">Prachuap Khiri Khan</a>
+                        <br>
+                        <br>
+                            <a href="History_Phet" class="text-white" style="text-decoration: none;">Phetchaburi</a>
+                        <br>
+                        <br>
+                            <a href="History_Rat" class="text-white" style="text-decoration: none;">Ratchaburi</a>
+                          </h6>
+                    </div>
+
+                  <div class="col-md-3">
+                    <hr class="hr-1">
+                    <h5 class="text-uppercase font-weight-bold text-center">
+                      <a href="#" class="text-white" style="text-decoration: none;">Tourist Attractions</a>
+                    </h5>
+                    <hr class="hr-1">
+                    <h6 class="text-uppercase text-center">
+                      <a href="Travel_Kan" class="text-white" style="text-decoration: none;">Kanchanaburi</a>
+                      <br>
+                      <br>
+                          <a href="Travel_Tak" class="text-white" style="text-decoration: none;">Tak</a>
+                      <br>
+                      <br>
+                          <a href="Travel_Prac" class="text-white" style="text-decoration: none;">Prachuap Khiri Khan</a>
+                      <br>
+                      <br>
+                          <a href="Travel_Phet" class="text-white" style="text-decoration: none;">Phetchaburi</a>
+                      <br>
+                      <br>
+                          <a href="Travel_Rat" class="text-white" style="text-decoration: none;">Ratchaburi</a>
+                        </h6>
+                  </div>
+
+                  <div class="col-md-2">
+                    <hr class="hr-1">
+                    <h5 class="text-uppercase font-weight-bold text-center">
+                      <a href="/product" class="text-white" style="text-decoration: none;">Products</a>
+                    </h5>
+                    <hr class="hr-1">
+                  </div>
+
+                  <div class="col-md-2">
+                    <hr class="hr-1">
+                    <h5 class="text-uppercase font-weight-bold text-center">
+                      <a href="/contact" class="text-white" style="text-decoration: none;">Contact Us</a>
+                    </h5>
+                    <hr class="hr-1">
+                  </div>
+
+        </div>
+      </section>
+
+      <hr class="my-5">
+      <section class="mb-3">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <p>
+              Website introducing tourist attractions in the western region of Thailand.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div
+         class="text-center p-3"
+         style="background-color: rgba(0, 0, 0, 0.2)"
+         >
+      © 2023 Copyright:
+      <a class="text-white" href="/home"
+         >tiewtok.com</a>
+    </div>
+  </footer>
+  <!-- Footer -->
+
+  <!-- script -->
+  <script src="/js/navbar.js"></script>
+  <script src="/js/sendmail.js"></script>
+  <script src="/js/faq.js"></script>
+  <script src="/js/map_modal.js"></script>
+  </body>
+</html>

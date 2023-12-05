@@ -1,0 +1,14 @@
+{
+    "type": "service_account",
+    "project_id": "tourist-attraction-80139",
+    "private_key_id": "9266f9566c2364d5718d15eb7f8e3ecfa3fa274a",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDmWyxX/vESzHg9\nEsvCytV+20KYwk/KgtSYpjTjg3SrFJpVEX6Xn1EHLMfcc3Ig1mrTdqqzqLoFtmdN\nn1lSf0+ODV0etEePS5sg+xOdPKDUUAv98trdOsuVnop7+4r333QP1xqthJgrueuu\nRFgfPne1VQ1LkMUWCGXl4qqqYlWa4tZCb4qrQbBemsvQICFIj6SurECZl5Bq+WgQ\nwmTtbvp2B9/jkrA7sJJmdnEXBFq9Wa1MUUtvczvchEqMDWgJMg41azV0hvYYXank\n2k9yr1aJFUCDbfNUrM9N8YDNVVS9GZk//Gy2D73cNDO8jJiXHMvexpVCZZ0QeQxi\n1xrgpDdfAgMBAAECggEADwv1OA7qPqZGKQXGyIOznAnaGPIBq0KOJ3sdKPVSaXBl\nlQPuXHIRerdVRhRGaAMJeaRJNIYOF0cZtVYgzATj30KxNUsPrOUCjjjISF+ISTCs\nr9sCqoESK5pDr83iVHGZ+lo8dF7HtSd7pRJIHUuudGpIqDRzIzl2NSTFWBl8lQAi\nFZygzYrQ/0omfV14Mq2MSAXxislZ0Gcnt6UZs8Uaj14/PRZNZULXAk1CtADb7OCw\n8komC6cjRCpM4Jc0MX8vX+VZ37BvfCeNj5HF3/+ajXKR+31iYBg9dtspQasnYYok\nNhQNDhNvAZy7Jbe1OdsSOjjjymF816FrgB6PPJUp+QKBgQD8za8n8Fgt0QlVt/D+\nTLe28VDv/00BGgpCCjj9w9C4juCoGxlH/aUZit12RNMxgSUn5D7bwea0Vuj81Yej\nElIayfDzG9EjhhPnEAXil7S/XCCJdv0D/876f4ca+GcoxsslpXUSUVIdxCPh6CBQ\nKrmxMzYiOLUwGJiZyy26cL4+WQKBgQDpRNPvlQz61lZ139BRVL5YlzMsmTOHvv2X\n5kE94yx5tZbe6wl62MbkwtLbeCW0Eesnv6fPZumYYLSG+riiKvgZMIeeXlpbFTDz\nVT5Olu+iRAWfg11CILuSTSW1hwElUAb2wUY7OCtdti87P3JBpuzINNTZ+tTw5zJH\nLyevmw+cdwKBgA3q5PG18aTUFUd60PGvF44iyunrjDm7TUVFes29sgf3FbcrhsDH\n3gcB9h9EurvG+Fyx3CQNEL5s6nbA6q63m32OEI3RwjnKb94Qq8JFx9WhJMlsm5FU\ny/hOfQmnE0bTauuvqDpR78tjuPX+6YiAUajHwPsxVAhJ0lzlKqdQ/ahBAoGAT4ev\n2lcu/bZl8/pCw/fojbu/Ls1szDNJsqhGRhtV5okKzyXDLacK6KOj0D++Ww5g5kRp\nqkSkD9eotPx2RpPv0mbBVjVFCRjIf63oeFLtkJ0wbZoUCZ+vU8oJuUI2GcqXFTn/\n/+C+qEyc/c473jZTNE8O4uKqBxhMBAkHts9fGzECgYEAkZqKeMVQesoZtY1RGD1w\nWYcr0VGo5dorJi4LjFuYfPYlU/1AF+xowv9284Tdh6wAYLBcFkWSaFgeLZkfLAvU\nEnhWu+rYvBi3HrN/md95pMc+E0kbSHLWUDVyknfVfYmj/VQSCmBTTscDKC+zNOAg\nOBg/sGUsJsN/NXJ9CYjuPtE=\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-ov4ht@tourist-attraction-80139.iam.gserviceaccount.com",
+    "client_id": "103008258306277911720",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-ov4ht%40tourist-attraction-80139.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
+  

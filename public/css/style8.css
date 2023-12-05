@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+/* Enter Verification Code Page */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --first-color: #303ef7;
+    --second-color: hsl(208, 87%, 82%);
+    --third-color: #e92929;
+}
+
+body {
+    background-color: var(--second-color);
+    font-family: 'Poppins';
+}
+
+.img1 {
+    width: 16%;
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 40px;
+    text-shadow: 1px 1px 1px #e92929;
+}
+
+h5 {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.e1, .e2 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#email, #verificationCode {
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px; /* Set a maximum width for larger screens */
+    margin: 0 auto; /* Center the input fields */
+}
+
+#verificationCode {
+    width: 100%;
+    max-width: 150px; /* Set a maximum width for larger screens */
+    margin-bottom: 25px;
+}
+
+.btn1 {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    border: 2px solid #303ef7;
+    color: #303ef7;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.btn1:hover {
+    background: var(--first-color);
+    color: #fff;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .img1 {
+        width: 30%;
+    }
+    h1 {
+        margin-top: 40px;
+    }
+    h5 {
+        margin-top: 20px;
+    }
+    .e1, .e2 {
+        margin-top: 20px;
+    }
+}

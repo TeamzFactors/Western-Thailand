@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+/* profile page */
+
+:root {
+    --first-color: #303ef7;
+    --second-color: hsl(208, 87%, 82%);
+}
+
+body {
+    background-color: var(--second-color);
+}
+
+@keyframes rotatingRainbowShineAnimation {
+    0% {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      filter: brightness(1);
+      transform: rotate(0deg);
+    }
+    12.5% {
+      box-shadow: 0 0 20px rgba(148, 0, 211, 0.8), 0 0 30px rgba(148, 0, 211, 0.5);
+      filter: brightness(1.5);
+      transform: rotate(50deg);
+    }
+    25% {
+      box-shadow: 0 0 20px rgba(75, 0, 130, 0.8), 0 0 30px rgba(75, 0, 130, 0.5);
+      filter: brightness(1.5);
+      transform: rotate(100deg);
+    }
+    37.5% {
+      box-shadow: 0 0 20px rgba(0, 0, 255, 0.8), 0 0 30px rgba(0, 0, 255, 0.5);
+      filter: brightness(1.5);
+      transform: rotate(150deg);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.8), 0 0 30px rgba(0, 255, 0, 0.5);
+      filter: brightness(1.5);
+      transform: rotate(200deg);
+    }
+    62.5% {
+      box-shadow: 0 0 20px rgba(255, 255, 0, 0.8), 0 0 30px rgba(255, 255, 0, 0.5);
+      filter: brightness(1.5);
+      transform: rotate(250deg);
+    }
+    75% {
+      box-shadow: 0 0 20px rgba(255, 127, 0, 0.8), 0 0 30px rgba(255, 127, 0, 0.5);
+      filter: brightness(1.5);
+      transform: rotate(300deg);
+    }
+    87.5% {
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.5);
+      filter: brightness(1.5);
+      transform: rotate(350deg);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      filter: brightness(1);
+      transform: rotate(360deg);
+    }
+  }
+
+.profile_img {
+    transition: box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.profile_img:hover {
+    animation: rotatingRainbowShineAnimation 5s infinite linear;
+}
+
+.profile .card {
+	border-radius: 10px;
+    height: 348px;
+}
+
+.profile .card .card-header .profile_img {
+	width: 140px;
+	height: 140px;
+	object-fit: cover;
+	margin: 20px auto;
+	border: 8px solid #5aa8d9;
+	border-radius: 50%;
+}
+
+h6 {
+    margin-top: 15px;
+}
+
+.profile .card h3 {
+	font-size: 20px;
+	font-weight: 600;
+    font-family: 'Poppins';
+}
+
+.profile .card p {
+	font-size: 16px;
+	color: #000;
+    font-family: 'Poppins';
+}
+
+.profile .table th,
+.profile .table td {
+	font-size: 14px;
+	padding: 5px 10px;
+	color: #000;
+    font-family: 'Poppins';
+}
+
+section {
+	padding: 0.1em;
+}
+
+.btn1 {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    border: 2px solid #303ef7;
+    color: #303ef7;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-family: 'Poppins';
+    background-color: #fff;
+}
+
+.btn1:hover {
+    background: var(--first-color);
+    color: #fff;
+}
+
+.btn2 {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    border: 2px solid rgb(240, 53, 24);
+    color: rgb(240, 53, 24);
+    font-weight: 500;
+    padding: 10px 45px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-family: 'Poppins';
+    background-color: #fff;
+}
+
+.btn2:hover {
+    background-color: rgb(240, 53, 24);
+    color: #fff;
+}
+
+.card-body .button-container {
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+.profile .card {
+    height: auto; /* Adjust height as needed for smaller screens */
+}
+
+.profile .card .card-header .profile_img {
+    width: 100%; /* Make the profile image width 100% for smaller screens */
+    max-width: 140px; /* Set a maximum width for the profile image */
+    margin: 10px auto; /* Adjust margin for smaller screens */
+}
+
+h6 {
+    margin-top: 10px; /* Adjust margin for smaller screens */
+}
+
+.profile .card h3 {
+    font-size: 18px; /* Adjust font size for smaller screens */
+}
+
+.profile .card p {
+     font-size: 14px; /* Adjust font size for smaller screens */
+}
+
+.profile .table th,
+.profile .table td {
+    font-size: 12px; /* Adjust font size for smaller screens */
+    padding: 5px; /* Adjust padding for smaller screens */
+}
+
+.btn1,
+.btn2 {
+    padding: 8px 20px; /* Adjust padding for buttons on smaller screens */
+    }
+}
+
+@media only screen and (min-width: 769px) {
+.profile .card {
+    height: 348px;
+}
+
+.profile .card .card-header .profile_img {
+    height: 140px; /* Maintain a fixed height for larger screens */
+    border: 8px solid #5aa8d9;
+}
+
+h6 {
+    margin-top: 15px;
+}
+
+.profile .card h3 {
+    font-size: 20px;
+}
+
+.profile .card p {
+    font-size: 16px;
+}
+
+.profile .table th,
+.profile .table td {
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+.btn1,
+.btn2 {
+    padding: 10px 25px;
+    margin: 0 10px;
+    }
+}
+
+/* Space */
+.space1 {
+    margin-top: 75px;
+}

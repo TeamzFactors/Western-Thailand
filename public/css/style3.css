@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+/* register page */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* --body-color: hsl(208, 97%, 85%); */
+    --first-color: #303ef7;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.sign__img {
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    object-fit: fill;
+    object-position: center;
+    filter: blur(2px); 
+    -webkit-filter: blur(2.5px);
+    z-index: -5;
+}
+
+.container-fluid {
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    width: 100%;
+    max-width: 650px;
+    font-family: 'Poppins';
+    background: rgba(255, 255, 255, 0.611);
+    padding: 28px;
+    border-radius: 10px;
+    box-shadow: inset -2px 2px 2px white;
+}
+
+.form-title {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 6px;
+    color: #303ef7;
+    text-shadow: 1px 1px 0px black;
+}
+
+.main-user-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.user-input-box:nth-child(2n) {
+    justify-content: center;
+}
+
+.user-input-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+    justify-content: center;
+}
+
+.user-input-box label {
+    width: 95%;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+.user-input-box input {
+    height: 40px;
+    width: 95%;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid grey;
+    padding: 0 10px;
+}
+
+.login__check {
+    display: flex;
+    column-gap: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 9px;
+}
+  
+.login__check-input {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--text-color);
+    background-color: white;
+    border-radius: 0.25rem;
+    margin-right: 5px;
+}
+  
+.login__check-input:checked {
+    background: var(--first-color);
+}
+  
+.login__check-input:checked::before {
+    content: "✔";
+    display: block;
+    color: #fff;
+    font-size: 0.75rem;
+    transform: translate(1.5px, -2.5px);
+}
+  
+.login__check-label {
+    font-size: var(--small-font-size);
+    color: rgb(0, 0, 0);
+}
+
+.form-submit-btn {
+    margin-top: 15px;
+}
+
+.form-submit-btn input {
+    display: block;
+    width: 97%;
+    margin-top: 10px;
+    margin-left: 9px;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    color: rgb(209, 209, 209);
+    background: #303ef7;
+}
+
+.form-submit-btn input:hover {
+    background: darkblue;
+    color: rgb(255, 255, 255);
+}
+
+.need__login {
+    margin-top: 30px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+  
+.want__login {
+    text-decoration: none;
+    color: darkblue;
+}
+  
+.want__login:hover {
+    color: red;
+}
+
+.login__eye {
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    right: 2%; /* Adjusted for responsiveness */
+    top: 0;
+    bottom: 0;
+    margin-top: 1rem; /* Adjusted for responsiveness */
+    font-size: 1rem; /* Default font size for most screens */
+    cursor: pointer;
+}
+  
+/* Media query for small screens (e.g., smartphones) */
+@media (max-width: 576px) {
+.login__eye {
+    position: inherit;  
+    right: 5%; /* Adjust as needed for smaller screens */
+    margin-top: 0.5rem; /* Adjust as needed for smaller screens */
+    font-size: 1.5rem; /* Adjust as needed for smaller screens */
+  }
+}
+  
+/* Media query for medium screens (e.g., tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+.login__eye {
+    position: inherit;  
+    right: 2%; /* Adjust as needed for medium screens */
+    margin-top: 0.5rem; /* Adjust as needed for medium screens */
+    font-size: 1.25rem; /* Adjust as needed for medium screens */
+  }
+}
+  
+/* Media query for large screens (e.g., laptops and desktops) */
+@media (min-width: 769px) {
+.login__eye {
+    position: inherit;
+    right: 3%; /* Adjust as needed for larger screens */
+    margin-top: 0.5rem; /* Adjust as needed for larger screens */
+    font-size: 1.25rem; /* Adjust as needed for larger screens */
+  }
+}
+  
+
+@media(max-width: 600px) {
+.container-fluid {
+    width: 100%;
+    min-width: 280px;
+}
+
+.user-input-box {
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.user-input-box:nth-child(2n) {
+    justify-content: center;
+}
+
+.main-user-info {
+    max-height: 380px;
+    overflow: auto;
+}
+
+.login__check {
+    margin-left: 8px;
+}
+
+.form-submit-btn {
+    padding: 0.5em;
+    margin-left: -10px;
+}
+
+.main-user-info::-webkit-scrollbar {
+    width: 0;
+  }
+}

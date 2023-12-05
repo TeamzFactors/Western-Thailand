@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+/* Reset Email Sent Page */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --first-color: #303ef7;
+    --second-color: hsl(208, 87%, 82%);
+    --third-color: #e92929;
+}
+
+body {
+    background-color: var(--second-color);
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 40px;
+    text-shadow: 1px 1px 1px #e92929;
+    font-family: 'Poppins';
+}
+
+.img1 {
+    width: 16%;
+    margin-top: 35px;
+}
+
+p {
+    text-align: center;
+    font-family: 'Poppins';
+}
+
+.btn1 {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    border: 2px solid #303ef7;
+    color: #303ef7;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+    font-family: 'Poppins';
+    background-color: #fff;
+}
+
+.btn1:hover {
+    background: var(--first-color);
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .img1 {
+        width: 10%;
+    }
+
+    .btn1 {
+        font-size: 14px;
+        padding: 8px 20px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .img1 {
+        width: 8%;
+    }
+
+    .btn1 {
+        font-size: 12px;
+        padding: 6px 15px;
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTS</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/x-icon" href="/img/first/tiewtok.ico">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/style0.css">
+    <link rel="stylesheet" href="/css/style7.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan&display=swap" rel="stylesheet"> 
+</head>
+<!-- font on Body -->
+<body style="font-family: 'Kodchasan', sans-serif;">
+
+    <!-- navbar -->
+  <div class="p-3 text-white" style="background-color: #0f0c3a;">
+    <div class="flexMain">
+      <div class="flex2 text-center">
+        <div><strong>Website introducing tourist attractions in the western region of Thailand.</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flexMain sticky-top" style="background-color: rgb(255, 255, 255); border-bottom: #0f0c3a; border-bottom-style: solid; border-bottom-width: 0.8px;">
+    <div class="flex2">
+      <button class="btn siteLink" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" 
+      aria-controls="offcanvasExample" >
+        <i class="fas fa-bars me-2" style="color: #0f0c3a;"></i>MENU
+      </button>
+    </div>
+    <div class="flex3 text-center" id="siteBrand">
+      <a href="/home" style="text-decoration: none; color: #0f0c3a;">
+          <h2>TIEWTOK</h2></a>
+    </div>
+    <div class="flex2 text-end d-md-block ">
+      <% if (userLoggedIn) { %>
+        <a href="/login"><button class="whiteLink siteLink">Hi, <%= currentUser.Username %></button></a>
+        <a href="/logout"><button class="blackLink siteLink">LOG OUT</button></a>
+      <% } else { %>
+        <a href="/register"><button class="whiteLink siteLink">REGISTER</button></a>
+        <a href="/logins"><button class="blackLink siteLink">LOGIN</button></a>
+      <% } %>
+    </div>
+  </div>
+  
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header" style="margin-top: 20px; margin-left: 20px; margin-right: 30px;">
+      <a class="offcanvas-title" id="offcanvasExampleLabel"><img src="/img/first/logo.png" class="offcanvas-title" id="offcanvasExampleLabel" width="80px" height="80px" style="border-radius: 60px;"></a>
+      <button type="button" class="btn-close text-reset" style="font-size:large" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <a href="/home" class="btn nav-menu-item text-start" style="font-weight:bold;"><i class="me-3"></i>Home</a>
+
+
+            <a class="btn nav-menu-item text-start" style="padding-left: 47px; font-weight:bold;" data-bs-toggle="collapse" 
+          href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">History <i class="fa-solid fa-caret-down"></i></a>
+
+         <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="/History_Kan">
+              ●  Kanchanaburi
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="History_Tak">
+              ●  Tak
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="History_Prac">
+              ●  Prachuap Khiri Khan
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="History_Phet">
+              ●  Phetchaburi
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="History_Rat">
+              ●  Ratchaburi
+            </a>
+         </div>
+
+          <a class="btn nav-menu-item text-start" style="padding-left: 47px; font-weight:bold;" data-bs-toggle="collapse" 
+         href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">Tourist Attractions <i class="fa-solid fa-caret-down"></i></a>
+
+          <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="travel_Kan">
+              ●  Kanchanaburi
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="travel_Tak">
+              ●  Tak
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="travel_Prac">
+              ●  Prachuap Khiri Khan
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="travel_Phet">
+              ●  Phetchaburi
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="travel_Rat">
+              ●  Ratchaburi
+            </a>
+          </div>
+
+            <a href="/product" class="btn nav-menu-item text-start" style="font-weight:bold;"><i class="me-3"></i>Products</a>
+            <a href="/contact" class="btn nav-menu-item text-start" style="font-weight:bold;"><i class="me-3"></i>Contact Us</a>
+    </div>
+  </div>
+  <!-- navbar -->
+
+      <!-- main -->
+      <h1 class="text-center" style="padding-top: 60px; color: #0f0c3a;">Product</h1>
+    <div class="container">
+        <div class="row" style="padding-top: 40px;">
+            <h2 style="color: #0f0c3a; padding-bottom: 30px; padding-left: 50px;">Kanchanaburi</h2>
+            <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+                <div class="card-p">
+                    <div class="upper-part">
+                      <div class="upper-part-face" style="background-image: url(img/first/IMG_6219.JPG);"></div>
+                      <div class="upper-part-back">ดี๊ดีโฮมเมท ทำสดใหม่ตามออเดอร์ ไม่ใส่วัตถุกันเสีย ผลไม้แท้100%<br><br>ราคากล่องละ 35 บาท <br>3 กล่อง 100 บาท </div>
+                    </div>
+                    <div class="lower-part">
+                      <div class="lower-part-face">ข้าวแต๋นน้ำเมล่อน</div>
+                      
+                      <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/OTOP.KANCHANABURI/?_rdc=1&_rdr" style="color: #8d0505;">Buy Now</a></div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+              <div class="card-p">
+                  <div class="upper-part">
+                    <div class="upper-part-face" style="background-image: url(img/first/IMG_6218.JPG);"></div>
+                    <div class="upper-part-back">“จันทร์เพ็ญ” กระเป๋าใส่ IPad Tablet ผลิตภัณฑ์แปรรูปจากผ้าขาวม้า <br>มีช่องใส่ของด้านใน<br><br>ราคา 250 บาท</div>
+                  </div>
+                  <div class="lower-part">
+                    <div class="lower-part-face">กระเป๋าใส่ IPad Tablet</div>
+                    
+                    <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/OTOP.KANCHANABURI/?_rdc=1&_rdr" style="color: #8d0505;">Buy Now</a></div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+              <div class="card-p">
+                  <div class="upper-part">
+                    <div class="upper-part-face" style="background-image: url(img/first/IMG_6220.JPG);"></div>
+                    <div class="upper-part-back">Pauly เครื่องหนัง ทำจากหนังสัตว์จึงมีความสวยงามตามธรรมชาติของหนัง ดีไซน์หรู คุณภาพดี<br><br>ราคา 1,790 บาท</div>
+                  </div>
+                  <div class="lower-part">
+                    <div class="lower-part-face">กระเป๋าหนังแท้ 100%</div>
+                    
+                    <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/OTOP.KANCHANABURI/?_rdc=1&_rdr" style="color: #8d0505;">Buy Now</a></div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+              <div class="card-p">
+                  <div class="upper-part">
+                    <div class="upper-part-face" style="background-image: url(img/first/IMG_6216.JPG);"></div>
+                    <div class="upper-part-back">วรัทยาผ้าไทยช็อป กระเป๋าผ้าพกพาง่าย ผับเก็บได้ขนาดใหญ่จุของได้เยอะ <br><br>ราคา 159 บาท</div>
+                  </div>
+                  <div class="lower-part">
+                    <div class="lower-part-face">กระเป๋าผ้าสีม่วง <br>(ลายขอ) ยิหวา</div>
+                    
+                    <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/yiwhawaratthaya?_rdc=1&_rdr" style="color: #8d0505;">Buy Now</a></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="padding-top: 40px;">
+          <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+              <div class="card-p">
+                  <div class="upper-part">
+                    <div class="upper-part-face" style="background-image: url(img/first/IMG_6221.JPG);"></div>
+                    <div class="upper-part-back">ผลิตภัณฑ์แปรรูปจากผ้าขาวม้า "จันทร์เพ็ญ" หมวกทิวลิป ขอบปีกระบาย สามารถใส่ได้ 2 ด้าน<br><br>ราคา 250 บาท </div>
+                  </div>
+                  <div class="lower-part">
+                    <div class="lower-part-face">หมวกทิวลิป ขอบปีกระบาย</div>
+                    
+                    <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/profile.php?id=100046044545552&_rdc=1&_rdr" style="color: #8d0505;">Buy Now</a></div>
+                  </div>
+                </div>
+          </div>
+
+          <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+            <div class="card-p">
+                <div class="upper-part">
+                  <div class="upper-part-face" style="background-image: url(img/first/IMG_6217.JPG);"></div>
+                  <div class="upper-part-back">กระโปรงจากผ้าทอมือ แฮนด์เมดท์บายสรินทร <br>(สีม่วงชมพู)<br><br>ราคา 1,500 บาท</div>
+                </div>
+                <div class="lower-part">
+                  <div class="lower-part-face">กระโปรงจากผ้าทอมือ</div>
+                  
+                  <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/sarinthorn.num?_rdc=1&_rdr" style="color: #8d0505;">Buy Now</a></div>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+            <div class="card-p">
+                <div class="upper-part">
+                  <div class="upper-part-face" style="background-image: url(img/first/IMG_6222.JPG);"></div>
+                  <div class="upper-part-back">กระเป๋าแปรรูปจากผ้าขาวม้า สินค้า OTOP จากวิสาหกิจชุมชนบ้านบัว <br><br>ราคา 120 บาท</div>
+                </div>
+                <div class="lower-part">
+                  <div class="lower-part-face">กระเป๋าสตางค์ ปลายี่สก</div>
+                  
+                  <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/profile.php?id=100046044545552&_rdc=1&_rdr" style="color: #8d0505;">Buy Now</a></div>
+                </div>
+              </div>
+          </div>
+      </div>
+
+        <div class="row" style="padding-top: 60px;">
+            <h2 style="color: #0f0c3a; padding-bottom: 30px; padding-left: 50px;">Tak</h2>
+            <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+              <div class="card-p">
+                  <div class="upper-part">
+                    <div class="upper-part-face" style="background-image: url(img/first/IMG_6228.JPG);"></div>
+                    <div class="upper-part-back">ผ้าโพกผมร้อยลูกปัด<br>สีสันสดใส<br><br>ราคา 120 บาท </div>
+                  </div>
+                  <div class="lower-part">
+                    <div class="lower-part-face">ผ้าโพกผม</div>
+                    
+                    <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/profile.php?id=100037940416697&sk=photos" style="color: #8d0505;">Buy Now</a></div>
+                  </div>
+                </div>
+          </div>
+
+          <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+            <div class="card-p">
+                <div class="upper-part">
+                  <div class="upper-part-face" style="background-image: url(img/first/IMG_6229.JPG);"></div>
+                  <div class="upper-part-back">ตะกร้าหวายสานมือจาก<br>ผู้สูงอายุตำบลไม้งามงานละเอียด<br><br>ราคา 400 บาท</div>
+                </div>
+                <div class="lower-part">
+                  <div class="lower-part-face">ตะกร้าหวายสานมือ</div>
+                  
+                  <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/profile.php?id=100037940416697&sk=photos" style="color: #8d0505;">Buy Now</a></div>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+            <div class="card-p">
+                <div class="upper-part">
+                  <div class="upper-part-face" style="background-image: url(img/first/IMG_6230.JPG);"></div>
+                  <div class="upper-part-back">ดอกไม้จากไหมพรม <br>ช่อดอกไม้โครเชต์<br><br>ราคา 500 บาท</div>
+                </div>
+                <div class="lower-part">
+                  <div class="lower-part-face">ดอกไม้จากไหมพรม</div>
+                  
+                  <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/profile.php?id=100037940416697&sk=photos" style="color: #8d0505;">Buy Now</a></div>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+            <div class="card-p">
+                <div class="upper-part">
+                  <div class="upper-part-face" style="background-image: url(img/first/IMG_6231.JPG);"></div>
+                  <div class="upper-part-back">กางเกงขาสั้นถักมือ <br>เอว 28<br><br>ราคา 550 บาท</div>
+                </div>
+                <div class="lower-part">
+                  <div class="lower-part-face">กางเกงขาสั้น</div>
+                  
+                  <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/profile.php?id=100037940416697&sk=photos" style="color: #8d0505;">Buy Now</a></div>
+                </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="row" style="padding-top: 40px;">
+        <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+            <div class="card-p">
+                <div class="upper-part">
+                  <div class="upper-part-face" style="background-image: url(img/first/IMG_6232.JPG);"></div>
+                  <div class="upper-part-back">ผ้ากะเหรี่ยงทอมือจากกลุ่มพัฒนาสตรีบ้านแม่กลองคี โดดเด่นด้วยงานฝีมือพิถีพิถัน<br><br>ราคา 500 บาท </div>
+                </div>
+                <div class="lower-part">
+                  <div class="lower-part-face">ผ้าทอกะเหรี่ยง</div>
+                  
+                  <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/profile.php?id=100037940416697&sk=photos" style="color: #8d0505;">Buy Now</a></div>
+                </div>
+              </div>
+        </div>
+
+        <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+          <div class="card-p">
+              <div class="upper-part">
+                <div class="upper-part-face" style="background-image: url(img/first/IMG_6233.JPG);"></div>
+                <div class="upper-part-back">กระเป๋าตังค์ถักจากไหมพรมตกแต่งลายน่ารักๆ สีสันสดใส<br><br>ราคา 250 บาท</div>
+              </div>
+              <div class="lower-part">
+                <div class="lower-part-face">กระเป๋าปิ๊กแป๊ก</div>
+                
+                <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/WDREC51/?_rdc=1&_rdr" style="color: #8d0505;">Buy Now</a></div>
+              </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="row" style="padding-top: 60px;">
+            <h2 style="color: #0f0c3a; padding-bottom: 30px; padding-left: 50px;">Prachuap Khiri Khan</h2>
+            <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+              <div class="card-p">
+                  <div class="upper-part">
+                    <div class="upper-part-face" style="background-image: url(img/first/IMG_6227.JPG);"></div>
+                    <div class="upper-part-back">น้ำมันมะพร้าวสกัดเย็น 500 ml. สามารถรับประทานได้โดยตรง หรือผสมกับอาหารอื่นๆ<br><br>ราคา 300 บาท </div>
+                  </div>
+                  <div class="lower-part">
+                    <div class="lower-part-face">น้ำมันมะพร้าวสกัดเย็น</div>
+                    
+                    <div class="lower-part-back"><a class="menu__link" href="https://www.sangarooncoconutoil.com/product/8550-7000/น้ำมันมะพร้าวสกัดเย็น-500-ml" style="color: #8d0505;">Buy Now</a></div>
+                  </div>
+                </div>
+          </div>
+
+          <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+            <div class="card-p">
+                <div class="upper-part">
+                  <div class="upper-part-face" style="background-image: url(img/first/IMG_6226.JPG);"></div>
+                  <div class="upper-part-back">เจลว่านหางจระเข้ 100%<br><br>ราคา 385 บาท</div>
+                </div>
+                <div class="lower-part">
+                  <div class="lower-part-face">เจลว่านหางจระเข้</div>
+                  
+                  <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/grandmomspa?_rdc=1&_rdr" style="color: #8d0505;">Buy Now</a></div>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+            <div class="card-p">
+                <div class="upper-part">
+                  <div class="upper-part-face" style="background-image: url(img/first/IMG_6214.JPG);"></div>
+                  <div class="upper-part-back">ยาสีฟันธรรมชาติสูตรน้ำมันมะพรา้วสกัดเย็นผสมถ่านกัมมันต์<br><br>ราคา 155 บาท</div>
+                </div>
+                <div class="lower-part">
+                  <div class="lower-part-face">ยาสีฟันธรรมชาติ</div>
+                  
+                  <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/100pancoco/?_rdc=1&_rdr" style="color: #8d0505;">Buy Now</a></div>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+            <div class="card-p">
+                <div class="upper-part">
+                  <div class="upper-part-face" style="background-image: url(img/first/MG_6223.JPG);"></div>
+                  <div class="upper-part-back">กระเป๋าผ้ามัดย้อม ถมอดุ๊ ผลิตจากผ้ามัดย้อมและย้อมสีจากเปลือกมะพร้าว<br><br>ราคา 400 บาท</div>
+                </div>
+                <div class="lower-part">
+                  <div class="lower-part-face">กระเป๋าถมอดุ๊</div>
+                  
+                  <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/profile.php?id=100054198459828&paipv=0&eav=Afaka_STFhlpWH8YZHygu_HqEUGq8Mgjfud5ytqdTVuAC7ZvYfj-xvbMFnNvqucyNkY&_rdc=1&_rdr" style="color: #8d0505;">Buy Now</a></div>
+                </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="row" style="padding-top: 40px;">
+        <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+            <div class="card-p">
+                <div class="upper-part">
+                  <div class="upper-part-face" style="background-image: url(img/first/IMG_6224.JPG);"></div>
+                  <div class="upper-part-back">ริชชี่ ดอกไม้น้ำหอม <br>กลิ่น Paradise Floral <br><br>ราคา 290 บาท </div>
+                </div>
+                <div class="lower-part">
+                  <div class="lower-part-face">ริชชี่ ดอกไม้น้ำหอม</div>
+                  
+                  <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/richyscent/?_rdc=1&_rdr" style="color: #8d0505;">Buy Now</a></div>
+                </div>
+              </div>
+        </div>
+
+        <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+          <div class="card-p">
+              <div class="upper-part">
+                <div class="upper-part-face" style="background-image: url(img/first/IMG_6225.JPG);"></div>
+                <div class="upper-part-back">ผ้าทอมือยกดอกลายเต่า สีชมพู<br><br>ราคา 1,050 บาท</div>
+              </div>
+              <div class="lower-part">
+                <div class="lower-part-face">ผ้าทอมือยกดอกลายเต่า</div>
+                
+                <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/profile.php?id=100063760789502" style="color: #8d0505;">Buy Now</a></div>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+          <div class="card-p">
+              <div class="upper-part">
+                <div class="upper-part-face" style="background-image: url(img/first/IMG_6215.JPG);"></div>
+                <div class="upper-part-back">สบู่ผิวหน้า กลิ่นว่านหางจระเข้<br><br>ราคา 120 บาท</div>
+              </div>
+              <div class="lower-part">
+                <div class="lower-part-face">สบู่ผิวหน้า</div>
+                
+                <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/noblesensebysamran/?_rdc=1&_rdr" style="color: #8d0505;">Buy Now</a></div>
+              </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="row" style="padding-top: 60px;">
+            <h2 style="color: #0f0c3a; padding-bottom: 30px; padding-left: 50px;">Phetchaburi</h2>
+            <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+              <div class="card-p">
+                  <div class="upper-part">
+                    <div class="upper-part-face" style="background-image: url(img/first/IMG_6247.PNG);"></div>
+                    <div class="upper-part-back">ขนมหม้อแกงบ้านทวีศรี จ.เพชรบุรี หวาน มัน อร่อย สด สะอาด<br><br>180 กรัม ราคา 17 บาท </div>
+                  </div>
+                  <div class="lower-part">
+                    <div class="lower-part-face">ขนมหม้อแกงบ้านทวีศรี</div>
+                    
+                    <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/profile.php?id=100072293576541" style="color: #8d0505;">Buy Now</a></div>
+                  </div>
+                </div>
+          </div>
+
+          <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+            <div class="card-p">
+                <div class="upper-part">
+                  <div class="upper-part-face" style="background-image: url(img/first/IMG_6241.JPG);"></div>
+                  <div class="upper-part-back">วุ้นกรอบโตนดสุก จากวิสาหกิจชุมชนบ้านไร่กร่าง<br><br>ราคา 35 บาท</div>
+                </div>
+                <div class="lower-part">
+                  <div class="lower-part-face">วุ้นกรอบโตนดสุก</div>
+                  
+                  <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/profile.php?id=100088132722219&_rdc=1&_rdr" style="color: #8d0505;">Buy Now</a></div>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+            <div class="card-p">
+                <div class="upper-part">
+                  <div class="upper-part-face" style="background-image: url(img/first/IMG_6242.JPG);"></div>
+                  <div class="upper-part-back">หมอนฟักทอง กลุ่มอาชีพหมอนฟักทองแฮนเมค บ้านน้อย<br><br>ราคา 500 บาท</div>
+                </div>
+                <div class="lower-part">
+                  <div class="lower-part-face">หมอนฟักทอง</div>
+                  
+                  <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/tusnee.eiumsaard?_rdc=1&_rdr" style="color: #8d0505;">Buy Now</a></div>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+            <div class="card-p">
+                <div class="upper-part">
+                  <div class="upper-part-face" style="background-image: url(img/first/IMG_6243.JPG);"></div>
+                  <div class="upper-part-back">ป้อนคำหวาน อาลัวจิ๋ว สูตรดั้งเดิม อร่อยเพลินพอดีคำ กระปุกจิ๋วพกพาง่าย<br><br>ราคา 65 บาท</div>
+                </div>
+                <div class="lower-part">
+                  <div class="lower-part-face">ป้อนคำหวาน อาลัวจิ๋ว</div>
+                  
+                  <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/ponkumwan2010/?ref=page_internal&_rdc=1&_rdr" style="color: #8d0505;">Buy Now</a></div>
+                </div>
+              </div>
+          </div>
+      </div>
+
+        <div class="row" style="padding-top: 60px;">
+            <h2 style="color: #0f0c3a; padding-bottom: 30px; padding-left: 50px;">Ratchaburi</h2>
+            <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+              <div class="card-p">
+                  <div class="upper-part">
+                    <div class="upper-part-face" style="background-image: url(img/first/IMG_6234.JPG);"></div>
+                    <div class="upper-part-back">"ผ้าทอมือคูบัว" จากช่างทอยอดฝีมือแห่งศูนย์ส่งเสริมอาชีพการทอผ้าจกบ้านใต้ (เพชรทองคำ)<br><br>ราคา 1,000 บาท </div>
+                  </div>
+                  <div class="lower-part">
+                    <div class="lower-part-face">ผ้าทอมือคูบัว</div>
+                    
+                    <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/phetthongkham99/photos" style="color: #8d0505;">Buy Now</a></div>
+                  </div>
+                </div>
+          </div>
+
+          <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+            <div class="card-p">
+                <div class="upper-part">
+                  <div class="upper-part-face" style="background-image: url(img/first/IMG_6235.JPG);"></div>
+                  <div class="upper-part-back">ผิวพรรณกระจ่างใสสุขภาพดี พร้อมใจคัดสรรสมุนไพรในท้องถิ่นหลายชนิด<br><br>ราคา 35 บาท</div>
+                </div>
+                <div class="lower-part">
+                  <div class="lower-part-face">ไพรหอม สบู่สมุนไพร</div>
+                  
+                  <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/100064569233977/posts/pfbid02nQvf6MYzUtGLtvR6rZqBatSxnrnLiWRPXV7GkqH7d778VeBsyS4DoHV2teJ4PjUml/?mibextid=cr9u03&_rdc=1&_rdr" style="color: #8d0505;">Buy Now</a></div>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+            <div class="card-p">
+                <div class="upper-part">
+                  <div class="upper-part-face" style="background-image: url(img/first/IMG_6236.JPG);"></div>
+                  <div class="upper-part-back">ผ้าขาวม้าไทย สีสันไฉไล หัวใจฟูฟ่อง<br><br>ราคา 400 บาท</div>
+                </div>
+                <div class="lower-part">
+                  <div class="lower-part-face">กระเป๋าเป้ผ้าขาวม้า</div>
+                  
+                  <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/profile.php?id=100082980805310&_rdc=1&_rdr" style="color: #8d0505;">Buy Now</a></div>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+            <div class="card-p">
+                <div class="upper-part">
+                  <div class="upper-part-face" style="background-image: url(img/first/IMG_6237.JPG);"></div>
+                  <div class="upper-part-back">ผ้าพันคอลายผ้าขาวม้า เนื้อผ้านุ่ม ซับน้ำดี สีไม่ตก วัตุดิบ Cotton 40% Ploy 60% ระบายความร้อนได้ดี<br><br>ราคา 160 บาท</div>
+                </div>
+                <div class="lower-part">
+                  <div class="lower-part-face">"IMPANI" ผ้าพันคอลาย<br>ผ้าขาวม้า</div>
+                  
+                  <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/PAKAOMAIMPANI?_rdc=1&_rdr" style="color: #8d0505;">Buy Now</a></div>
+                </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="row" style="padding-top: 40px;">
+        <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+            <div class="card-p">
+                <div class="upper-part">
+                  <div class="upper-part-face" style="background-image: url(img/first/IMG_6238.JPG);"></div>
+                  <div class="upper-part-back">กระเป๋าถือผู้หญิง งานสานสุดมูจิ เรียบง่ายธรรมชาติ ขนาดกะทัดรัด<br><br>ราคา 300 บาท </div>
+                </div>
+                <div class="lower-part">
+                  <div class="lower-part-face">กระเป๋าสานแบบถือ</div>
+                  
+                  <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/chaisophab?comment_id=Y29tbWVudDoxNjIyNjQ2Mzk0ODI5NjE2XzM1ODgxMzcxOTE0MTc3Mzc%3D&_rdc=1&_rdr" style="color: #8d0505;">Buy Now</a></div>
+                </div>
+              </div>
+        </div>
+
+        <div class="col-md-3 text-center" style="padding-left: 40px; padding-bottom: 30px;">
+          <div class="card-p">
+              <div class="upper-part">
+                <div class="upper-part-face" style="background-image: url(img/first/IMG_6239.JPG);"></div>
+                <div class="upper-part-back">รองเท้าทำมือ ผลิตตามคำสั่งซื้อเท่านั้น พื้นรองเท้ายางพารา ยางดิบคุณภาพดี เย็บพื้นติดแน่นแข็งแรง <br><br>ราคา 995 บาท</div>
+              </div>
+              <div class="lower-part">
+                <div class="lower-part-face">รองเท้านินจา CS SHOES</div>
+                
+                <div class="lower-part-back"><a class="menu__link" href="https://web.facebook.com/csshoes2551?_rdc=1&_rdr" style="color: #8d0505;">Buy Now</a></div>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+     <!-- main -->
+
+    <div class="space1"></div><br>
+    <h6>&copy; Western Thailand</h6>
+
+<!-- Footer -->
+<footer class="text-center text-white" style="background-color: #0f0c3a">
+  <div class="container">
+    <section class="mt-5">
+      <div class="row d-flex pt-3">
+                  <div class="col-md-2">
+                    <hr class="hr-1">
+                    <h5 class="text-uppercase font-weight-bold text-center">
+                      <a href="/home" class="text-white" style="text-decoration: none;">Home</a>
+                    </h5>
+                    <hr class="hr-1">
+                  </div>
+
+                  <div class="col-md-3">
+                    <hr class="hr-1">
+                    <h5 class="text-uppercase font-weight-bold text-center">
+                      <a href="#" class="text-white" style="text-decoration: none;">History</a>
+                    </h5>
+                    <hr class="hr-1">
+                    <h6 class="text-uppercase text-center">
+                      <a href="History_Kan" class="text-white" style="text-decoration: none;">Kanchanaburi</a>
+                      <br>
+                      <br>
+                          <a href="History_Tak" class="text-white" style="text-decoration: none;">Tak</a>
+                      <br>
+                      <br>
+                          <a href="History_Prac" class="text-white" style="text-decoration: none;">Prachuap Khiri Khan</a>
+                      <br>
+                      <br>
+                          <a href="History_Phet" class="text-white" style="text-decoration: none;">Phetchaburi</a>
+                      <br>
+                      <br>
+                          <a href="History_Rat" class="text-white" style="text-decoration: none;">Ratchaburi</a>
+                        </h6>
+                  </div>
+
+                <div class="col-md-3">
+                  <hr class="hr-1">
+                  <h5 class="text-uppercase font-weight-bold text-center">
+                    <a href="#" class="text-white" style="text-decoration: none;">Tourist Attractions</a>
+                  </h5>
+                  <hr class="hr-1">
+                  <h6 class="text-uppercase text-center">
+                    <a href="travel_Kan" class="text-white" style="text-decoration: none;">Kanchanaburi</a>
+                    <br>
+                    <br>
+                        <a href="travel_Tak" class="text-white" style="text-decoration: none;">Tak</a>
+                    <br>
+                    <br>
+                        <a href="travel_Prac" class="text-white" style="text-decoration: none;">Prachuap Khiri Khan</a>
+                    <br>
+                    <br>
+                        <a href="travel_Phet" class="text-white" style="text-decoration: none;">Phetchaburi</a>
+                    <br>
+                    <br>
+                        <a href="travel_Rat" class="text-white" style="text-decoration: none;">Ratchaburi</a>
+                      </h6>
+                </div>
+
+                <div class="col-md-2">
+                  <hr class="hr-1">
+                  <h5 class="text-uppercase font-weight-bold text-center">
+                    <a href="/product" class="text-white" style="text-decoration: none;">Products</a>
+                  </h5>
+                  <hr class="hr-1">
+                </div>
+
+                <div class="col-md-2">
+                  <hr class="hr-1">
+                  <h5 class="text-uppercase font-weight-bold text-center">
+                    <a href="/contact" class="text-white" style="text-decoration: none;">Contact Us</a>
+                  </h5>
+                  <hr class="hr-1">
+                </div>
+
+      </div>
+    </section>
+
+    <hr class="my-5">
+    <section class="mb-3">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <p>
+            Website introducing tourist attractions in the western region of Thailand.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div
+       class="text-center p-3"
+       style="background-color: rgba(0, 0, 0, 0.2)"
+       >
+    © 2023 Copyright:
+    <a class="text-white" href="/home"
+       >tiewtok.com</a>
+  </div>
+</footer>
+<!-- Footer -->
+
+  <script src="/js/navbar.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ความเป็นมา จังหวัดกาญจนบุรี</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="/img/first/tiewtok.ico">
+
+    <link rel="stylesheet" href="/css/history.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+  <!-- navbar -->
+  <div class="p-3 text-white" style="background-color: #0f0c3a;">
+    <div class="flexMain">
+      <div class="flex2 text-center">
+        <div><strong>Website introducing tourist attractions in the western region of Thailand.</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flexMain sticky-top" style="background-color: rgb(255, 255, 255); border-bottom: #0f0c3a; border-bottom-style: solid; border-bottom-width: 0.8px;">
+    <div class="flex2">
+      <button class="btn siteLink" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" 
+      aria-controls="offcanvasExample" >
+        <i class="fas fa-bars me-2" style="color: #0f0c3a;"></i>MENU
+      </button>
+    </div>
+    <div class="flex3 text-center" id="siteBrand">
+      <a href="/home" style="text-decoration: none; color: #0f0c3a;">
+          <h2>TIEWTOK</h2></a>
+    </div>
+      <div class="flex2 text-end d-md-block ">
+        <a href="/login"><button class="whiteLink siteLink">PROFILE</button></a>
+        <a href="/logout"><button class="blackLink siteLink">LOG OUT</button></a>
+      </div>
+  </div>
+  
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header" style="margin-top: 20px; margin-left: 20px; margin-right: 30px;">
+      <a class="offcanvas-title" id="offcanvasExampleLabel"><img src="/img/first/logo.png" class="offcanvas-title" id="offcanvasExampleLabel" width="80px" height="80px" style="border-radius: 60px;"></a>
+      <button type="button" class="btn-close text-reset" style="font-size:large" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <a href="/home" class="btn nav-menu-item text-start" style="font-weight:bold;"><i class="me-3"></i>Home</a>
+
+
+            <a class="btn nav-menu-item text-start" style="padding-left: 47px; font-weight:bold;" data-bs-toggle="collapse" 
+          href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">History <i class="fa-solid fa-caret-down"></i></a>
+
+         <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="/History_Kan">
+              ●  Kanchanaburi
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="History_Tak">
+              ●  Tak
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="History_Prac">
+              ●  Prachuap Khiri Khan
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="History_Phet">
+              ●  Phetchaburi
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="History_Rat">
+              ●  Ratchaburi
+            </a>
+         </div>
+
+          <a class="btn nav-menu-item text-start" style="padding-left: 47px; font-weight:bold;" data-bs-toggle="collapse" 
+         href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">Tourist Attractions <i class="fa-solid fa-caret-down"></i></a>
+
+          <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="travel_Kan">
+              ●  Kanchanaburi
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="travel_Tak">
+              ●  Tak
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="travel_Prac">
+              ●  Prachuap Khiri Khan
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="travel_Phet">
+              ●  Phetchaburi
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="travel_Rat">
+              ●  Ratchaburi
+            </a>
+          </div>
+
+            <a href="/product" class="btn nav-menu-item text-start" style="font-weight:bold;"><i class="me-3"></i>Products</a>
+            <a href="/contact" class="btn nav-menu-item text-start" style="font-weight:bold;"><i class="me-3"></i>Contact Us</a>
+    </div>
+  </div>
+  <!-- navbar -->
+
+    <!-- Title -->
+    <div style="height: 50px;"></div>
+    <div class="wrapper">
+        <h1>ประวัติความเป็นมา</h1>
+    </div>
+
+    <!-- History -->
+    <div style="height: 50px;"></div>
+    <div class="h1 text-center fw-bolder"> <%= row.pname %> </div>
+    <div class="h5 mx-3 text-center"> <%= row.slogan %> </div>
+    <div style="height: 50px;"></div>
+
+    <!-- Timeline -->
+    <section>
+        <div class="container">
+            <div class="row" >
+                <div class="history-wrapper">
+                    <div class="title-wrap text-center one-of-two">
+                        <h2 class="h1 text-secondary mb-0 text-uppercase">History</h2>
+                        <p class="fs-3 font-weight-500">Let's get to know Kanchanaburi Province.</p>
+                    </div>
+                    <div class="timeline-box one-of-two">
+                        <img class="mb-1-6 rounded img-fluid hover-rotate" src="/img_his/2.jpg" width="400px" alt="...">
+                        <div class="content">
+                            <h3 class="h4 mb-2 mb-md-3">จังหวัดกาญจนบุรี</h3>
+                            <p class="mb-0">เป็นที่อยู่ของธรรมชาติที่งดงามและสถานที่ประวัติศาสตร์ที่น่าทึ่ง พร้อมกับวัฒนธรรมท้องถิ่นที่สดใส จังหวัดนี้เสนอประสบการณ์ท่องเที่ยวที่หลากหลาย ทั้งจากวัดที่สวยงาม ถึงราชวังปราสาท และบรรยากาศที่สดชื่นของภูเขาและน้ำตกที่พบได้ตลอดปี ที่นี่คือสถานที่ที่คุณสามารถค้นพบทุกอย่าง</p>
+                        </div>
+                        <div class="year">#1</div>
+                    </div>
+                    <div class="timeline-box one-of-two">
+                        <img class="mb-1-6 rounded img-fluid hover-rotate2" src="/img_his/3.jpg" width="400px" alt="...">
+                        <div class="content">
+                            <h3 class="h4 mb-2 mb-md-3">สมัยก่อนประวัติศาสตร์</h3>
+                            <p class="mb-0">กาญจนบุรี เริ่มต้นตั้งแต่สมัยเริ่มก่อนประวัติศาสตร์ เป็นแหล่งที่อุดมสมบูรณ์เหมาะที่จะเป็นที่ตั้งอาศัยของมนุษยม์ มีการค้นพบหลักฐานทางด้านโบราณคดีมากมาย ได้แก่ เครื่องมือหินกะเทาะ เครื่องมือสมัยหินใหม่ เครื่องมือสมัยโลหะ ฯลฯ พบตามถ้ำเพิงผา และตามลำน้ำแควน้อย แควใหญ่ ตลอดไปจนลุ่มแม่น้ำแม่กลอง</p>
+                        </div>
+                        <div class="year">#2</div>
+                    </div>
+                    <div class="timeline-box one-of-two">
+                        <img class="mb-1-6 rounded img-fluid hover-rotate" src="/img_his/4.jpeg" width="400px" alt="...">
+                        <div class="content">
+                            <h3 class="h4 mb-2 mb-md-3">การเข้ามาของชาวอินเดีย</h3>
+                            <p class="mb-0">เมื่ออินเดียได้เดินทางเข้ามาค้าขายและเผยแพร่พุทธศาสนาไปยังแคว้นสุวรรณภูมิ พบหลักฐานศิลปะอินเดียสมัยคุปตะในสมัยทวาราวดีตามลำน้ำแควน้อย แควใหญ่ และแม่กลอง ที่บ้านวังปะโท่ บ้านท่าหวี บ้านวังตะเคียน และพงตึก โบราณวัตถุสถานที่พล เช่น ซากเจดีย์วิหาร พระพุทธรูป ภาชนะดินเผา และตะเกียงโรมันสำริด ที่นับเป็นโบราณวัตถุที่เก่าแก่ที่สุดของไทย</p>
+                        </div>
+                        <div class="year">#3</div>
+                    </div>
+                    <div class="timeline-box one-of-two">
+                        <img class="mb-1-6 rounded img-fluid hover-rotate2" src="/img_his/5.jpg" width="400px" alt="...">
+                        <div class="content">
+                            <h3 class="h4 mb-2 mb-md-3">กาญจนบุรีจากพงศาวดาร</h3>
+                            <p class="mb-0">จากหลักฐานทางเอกสารที่เก่าแก่ที่สุดที่กล่าวถึงเมืองกาญจนบุรี คือ พงศาวดารเหนือ กล่าวว่า "กาญจนบุรีเป็นเมืองพญากง พระราชทานบิดาของพระยาพาน เป็นเมืองสำคัญของแคว้นอู่ทองหรือสุวรรณภูมิ มีผู้สันนิษฐานว่า พญากงสร้างขึ้นราว พ.ศ.1350" ต่อมา ขอมได้แผ่อิทธิพลนำเอาศาสนาพุทธมหายานเข้ามา ประดิษฐานในเมืองกาญจนบุรี ปรากฏหลักฐานคือปราสาทเมืองสิงห์ เมืองครุฑ เมืองกลอนโด จนอำนาจ อิทธิพลขอมเสื่อมลงไป</p>
+                        </div>
+                        <div class="year">#4</div>
+                    </div>
+                    <div class="timeline-box one-of-two">
+                        <img class="mb-1-6 rounded img-fluid hover-rotate" src="/img_his/6.jpeg" width="250px" alt="...">
+                        <div class="content">
+                            <h3 class="h4 mb-2 mb-md-3">สมัยกรุงศรีอยุธยาเป็นราชธานี</h3>
+                            <p class="mb-0">เมืองกาญจนบุรี ตั้งอยู่ในช่องเขาริมลำน้ำแควใหญ่ มีลำตะเพินอยู่ทางทิศเหนือ ด้านหลังติดเขาชนไก่ ชาวบ้านเรียกกันว่า เมืองกาญจนบุรีเก่า มีผังเมืองเป็นรูปสี่เหลี่ยมผืนผ้า มีป้อมมุมเมืองก่อด้วยดินและหินทับถมกัน ลักษณะของการตั้งเมือง เหมาะแก่ยุทธศาสตร์ในสมัยนั้นอย่างยิ่ง ปัจจุบันยังมีซากกำแพงเมือง ป้องปราการ พระปรางค์เจดีย์ และวัดร้างถึง 7 วัด กาญจนบุรี เป็นสมรภูมิหลายครั้ง และเป็นทางผ่านไปตีอยุธยาจนต้องเสียกรุงครั้งที่ 2 ไป และต้องย้ายราชธานีใหม่</p>
+                        </div>
+                        <div class="year">#5</div>
+                    </div>
+                    <div class="timeline-box one-of-two">
+                        <img class="mb-1-6 rounded img-fluid hover-rotate2" src="/img_his/7.jpeg" width="400px" alt="...">
+                        <div class="content">
+                            <h3 class="h4 mb-2 mb-md-3">ย้ายราชธานีมาอยู่ที่กรุงเทพฯ</h3>
+                            <p class="mb-0">เมื่อไทยย้ายราชธานีมาอยู่ที่กรุงเทพฯ เพียง 3 ปีก็เกิดสงครามใหญ่คือ สงคราม 9 ทัพ แต่ไทยสามารถ ยันกองทัพพม่าแตกพ่ายไปได้ หลังจากสิ้นสงคราม 9 ทัพแล้ว จึงได้เลื่อนที่ตั้งฐานทัพจากเมืองกาญจนบุรีที่ลาดหญ้า มาตั้งที่ตำบลปากแพรก ซึ่งเป็นที่รวมของแม่น้ำ ทั้ง 2 สายกลายเป็นแม่น้ำแม่กลอง</p>
+                        </div>
+                        <div class="year">#6</div>
+                    </div>
+                    <div class="timeline-box one-of-two">
+                        <img class="mb-1-6 rounded img-fluid hover-rotate" src="/img_his/8.jpeg" width="400px" alt="...">
+                        <div class="content">
+                            <h3 class="h4 mb-2 mb-md-3">กาญจนบุรีที่งดงาม</h3>
+                            <p class="mb-0">จังหวัดกาญจนบุรี เป็นที่อยู่ของธรรมชาติที่งดงามและสถานที่ประวัติศาสตร์ที่น่าทึ่ง ทั้งแหล่งท่องเที่ยวที่หลากหลาย มีประวัติความสำคัญทั้งในสงครามและการย้ายเมืองราชธานี ครั้งหนึ่งเคยเป็นเมืองหน้าด่านที่ติดกับประเทศพม่า และยังมีหลักฐานทางโบราณคดีมากมายที่แสดงถึงความเจริญรุ่ง</p>
+                        </div>
+                        <div class="year">#7</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+  <!-- ------------------------------------------------------------------------------------------------------------------------------- -->  
+  <div style="height: 70px;"></div>
+  <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+
+  <!-- Do you know? -->
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+
+        <div class="col-lg-7">
+
+            <div class="h4">เรื่องน่ารู้ของจังหวัดกาญจนบุรี</div><br>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-body-tertiary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      <b>แนวร่วมของน้ำตกแก่งกระจาน</b>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">น้ำตกแก่งกระจาน ในอำเภอแก่งกระจาน เป็นที่รู้จักในมุมมองท่องเที่ยวและนิยมเป็นอย่างมาก เป็นที่พักผ่อนและศึกษาธรรมชาติที่มีความสวยงามและเพื่อนบ้านที่น่ารัก นอกจากนี้ยังเป็นจุดชมวิวที่สวยงามของประเทศหลังจากการเดินทางขึ้นไปบนเนินเขา</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-body-tertiary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      <b>สถานีรถไฟดินแดงกาญจนบุรี</b>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">สถานีรถไฟดินแดงกาญจนบุรี มีความสำคัญทางประวัติศาสตร์ มีโครงสร้างที่ทรงพลังและความเป็นที่รู้จักเป็นอย่างมาก ที่นี่เป็นจุดเริ่มต้นของการขุดเจาะที่สำคัญในประเทศ และก็มีความสำคัญทางท่องเที่ยว เพราะความสวยงามของสถาปัตยกรรมและวิถีชีวิตของชาวพื้นถิ่น</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-body-tertiary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      <b>ปราสาทเมืองสิงห์</b>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">ปราสาทเมืองสิงห์ เป็นสถานที่สำคัญทางประวัติศาสตร์และท่องเที่ยวในจังหวัดกาญจนบุรี อยู่บนยอดเขาสิงห์ เป็นสถานที่ท่องเที่ยวที่มีการบูรณะเข้าไปในที่สวยงามของสิ่งมีชีวิตและศิลปะไทยแบบสุโขทัยโบราณ ทำให้เป็นจุดชมวิวที่สวยงามและน่าสนใจที่มีประวัติศาสตร์ของประเทศไทย</div>
+                  </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+  </div>
+
+  <!-- Map -->
+  <br><br>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497700.1456263972!2d99.27164730017033!3d12.953773534236692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e31ad50641d69d%3A0x4f97bc0e92713e12!2z4LiB4Liy4LiN4LiI4LiZ4Lia4Li44Lij4Li1!5e0!3m2!1sth!2sth!4v1700845840536!5m2!1sth!2sth" style="border:0; width: 100%; height: 400px; margin-bottom: -7px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  <h6 style="text-align: center; color: rgb(155, 154, 154); margin-top: 60px;">&copy; Western Thailand</h6>
+
+  <!-- Footer -->
+  <footer class="text-center text-white" style="background-color: #0f0c3a">
+    <div class="container">
+      <section class="mt-5">
+        <div class="row d-flex pt-3">
+                    <div class="col-md-2">
+                      <hr class="hr-1">
+                      <h5 class="text-uppercase font-weight-bold text-center">
+                        <a href="/home" class="text-white" style="text-decoration: none;">Home</a>
+                      </h5>
+                      <hr class="hr-1">
+                    </div>
+
+                    <div class="col-md-3">
+                      <hr class="hr-1">
+                      <h5 class="text-uppercase font-weight-bold text-center">
+                        <a href="#" class="text-white" style="text-decoration: none;">History</a>
+                      </h5>
+                      <hr class="hr-1">
+                      <h6 class="text-uppercase text-center">
+                        <a href="History_Kan" class="text-white" style="text-decoration: none;">Kanchanaburi</a>
+                        <br>
+                        <br>
+                            <a href="History_Tak" class="text-white" style="text-decoration: none;">Tak</a>
+                        <br>
+                        <br>
+                            <a href="History_Prac" class="text-white" style="text-decoration: none;">Prachuap Khiri Khan</a>
+                        <br>
+                        <br>
+                            <a href="History_Phet" class="text-white" style="text-decoration: none;">Phetchaburi</a>
+                        <br>
+                        <br>
+                            <a href="History_Rat" class="text-white" style="text-decoration: none;">Ratchaburi</a>
+                          </h6>
+                    </div>
+
+                  <div class="col-md-3">
+                    <hr class="hr-1">
+                    <h5 class="text-uppercase font-weight-bold text-center">
+                      <a href="#" class="text-white" style="text-decoration: none;">Tourist Attractions</a>
+                    </h5>
+                    <hr class="hr-1">
+                    <h6 class="text-uppercase text-center">
+                      <a href="travel_Kan" class="text-white" style="text-decoration: none;">Kanchanaburi</a>
+                      <br>
+                      <br>
+                          <a href="travel_Tak" class="text-white" style="text-decoration: none;">Tak</a>
+                      <br>
+                      <br>
+                          <a href="travel_Prac" class="text-white" style="text-decoration: none;">Prachuap Khiri Khan</a>
+                      <br>
+                      <br>
+                          <a href="travel_Phet" class="text-white" style="text-decoration: none;">Phetchaburi</a>
+                      <br>
+                      <br>
+                          <a href="travel_Rat" class="text-white" style="text-decoration: none;">Ratchaburi</a>
+                        </h6>
+                  </div>
+
+                  <div class="col-md-2">
+                    <hr class="hr-1">
+                    <h5 class="text-uppercase font-weight-bold text-center">
+                      <a href="/product" class="text-white" style="text-decoration: none;">Products</a>
+                    </h5>
+                    <hr class="hr-1">
+                  </div>
+
+                  <div class="col-md-2">
+                    <hr class="hr-1">
+                    <h5 class="text-uppercase font-weight-bold text-center">
+                      <a href="/contact" class="text-white" style="text-decoration: none;">Contact Us</a>
+                    </h5>
+                    <hr class="hr-1">
+                  </div>
+
+        </div>
+      </section>
+
+      <hr class="my-5">
+      <section class="mb-3">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <p>
+              Website introducing tourist attractions in the western region of Thailand.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div
+         class="text-center p-3"
+         style="background-color: rgba(0, 0, 0, 0.2)"
+         >
+      © 2023 Copyright:
+      <a class="text-white" href="/home"
+         >tiewtok.com</a>
+    </div>
+  </footer>
+  <!-- Footer -->
+
+</body>
+</html>

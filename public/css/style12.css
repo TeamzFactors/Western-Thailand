@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+/* Change Password Page */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --first-color: #303ef7;
+    --second-color: hsl(208, 87%, 82%);
+    --third-color: #e92929;
+}
+
+body {
+    background-color: var(--second-color);
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 40px;
+    text-shadow: 1px 1px 1px #e92929;
+    font-family: 'Poppins';
+}
+
+.img1 {
+    width: 18%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.w1, .w2, .w3 {
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 14pt;
+}
+
+.alert {
+    width: 30%;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#currentPassword, #newPassword, #confirmPassword {
+    border: none;
+    border-radius: 5px;
+    width: 15%; /* Updated width for better responsiveness */
+    text-align: center;
+    margin-bottom: 15px; /* Added margin for better spacing */
+}
+
+.btn2 {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    border: 2px solid #e92929;
+    color: #e92929;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    margin-top: 25px;
+    font-family: 'Poppins';
+    background-color: #fff;
+}
+
+.btn2:hover {
+    background: var(--third-color);
+    color: #fff;
+}
+
+/* Media Query for Tablets */
+@media screen and (max-width: 768px) {
+    #currentPassword, #newPassword, #confirmPassword {
+        width: 100%; /* Adjusted width for better responsiveness on tablets */
+    }
+}
+
+/* Media Query for Mobile Phones */
+@media screen and (max-width: 480px) {
+    #currentPassword, #newPassword, #confirmPassword {
+        width: 100%; /* Adjusted width for better responsiveness on mobile phones */
+    }
+    .btn2 {
+        width: 100%; /* Adjusted button width for better responsiveness on mobile phones */
+        margin: 0; /* Removed horizontal margin for better spacing */
+    }
+}
