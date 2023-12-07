@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Western of Thailand</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/x-icon" href="/img/first/tiewtok.ico">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/style0.css">
+    <link rel="stylesheet" href="/css/style6.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan&display=swap" rel="stylesheet">
+</head>
+<!-- font on Body -->
+<body style="font-family: 'Kodchasan', sans-serif;">
+
+  <!-- navbar -->
+  <div class="p-3 text-white" style="background-color: #0f0c3a;">
+    <div class="flexMain">
+      <div class="flex2 text-center">
+        <div><strong>Website introducing tourist attractions in the western region of Thailand.</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flexMain sticky-top" style="background-color: rgb(255, 255, 255); border-bottom: #0f0c3a; border-bottom-style: solid; border-bottom-width: 0.8px;">
+    <div class="flex2">
+      <button class="btn siteLink" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" 
+      aria-controls="offcanvasExample" >
+        <i class="fas fa-bars me-2" style="color: #0f0c3a;"></i>MENU
+      </button>
+    </div>
+    <div class="flex3 text-center" id="siteBrand">
+      <a href="/home" style="text-decoration: none; color: #0f0c3a;">
+          <h2>TIEWTOK</h2></a>
+    </div>
+    <div class="flex2 text-end d-md-block ">
+      <% if (userLoggedIn) { %>
+        <a href="/login"><button class="whiteLink siteLink">Hi, <%= currentUser.Username %></button></a>
+        <a href="/logout"><button class="blackLink siteLink">LOG OUT</button></a>
+      <% } else { %>
+        <a href="/register"><button class="whiteLink siteLink">REGISTER</button></a>
+        <a href="/logins"><button class="blackLink siteLink">LOGIN</button></a>
+      <% } %>
+      </div>
+  </div>
+  
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header" style="margin-top: 20px; margin-left: 20px; margin-right: 30px;">
+      <a class="offcanvas-title" id="offcanvasExampleLabel"><img src="/img/first/logo.png" class="offcanvas-title" id="offcanvasExampleLabel" width="80px" height="80px" style="border-radius: 60px;"></a>
+      <button type="button" class="btn-close text-reset" style="font-size:large" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <a href="/home" class="btn nav-menu-item text-start" style="font-weight:bold;"><i class="me-3"></i>Home</a>
+
+
+            <a class="btn nav-menu-item text-start" style="padding-left: 47px; font-weight:bold;" data-bs-toggle="collapse" 
+          href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">History <i class="fa-solid fa-caret-down"></i></a>
+
+         <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="/History_Kan">
+              ●  Kanchanaburi
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="History_Tak">
+              ●  Tak
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="History_Prac">
+              ●  Prachuap Khiri Khan
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="History_Phet">
+              ●  Phetchaburi
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="History_Rat">
+              ●  Ratchaburi
+            </a>
+         </div>
+
+          <a class="btn nav-menu-item text-start" style="padding-left: 47px; font-weight:bold;" data-bs-toggle="collapse" 
+         href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">Tourist Attractions <i class="fa-solid fa-caret-down"></i></a>
+
+          <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="travel_Kan">
+              ●  Kanchanaburi
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="travel_Tak">
+              ●  Tak
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="travel_Prac">
+              ●  Prachuap Khiri Khan
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="travel_Phet">
+              ●  Phetchaburi
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="travel_Rat">
+              ●  Ratchaburi
+            </a>
+          </div>
+
+            <a href="/product" class="btn nav-menu-item text-start" style="font-weight:bold;"><i class="me-3"></i>Products</a>
+            <a href="/contact" class="btn nav-menu-item text-start" style="font-weight:bold;"><i class="me-3"></i>Contact Us</a>
+    </div>
+  </div>
+  <!-- navbar -->
+
+    <!-- home -->
+    <section class="hero-section" id="section_1">
+      <div class="section-overlay"></div>
+
+      <div class="container d-flex justify-content-center align-items-center">
+          <div class="row">
+
+              <div class="col-12 mt-auto mb-5 text-center">
+                  <small style="color:#eaeaea">Tourist Attractions</small>
+
+                  <h1 class="text-white mb-5">Western, Thailand</h1>
+                  <a class="btn btn-1 btn-lg smoothscroll" href="#scrollspyHeading2">
+                      <span>Let's begin</span>
+                  </a>
+              </div>
+
+              <div class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center">
+                  <div class="location-wrap mx-auto py-3 py-lg-0">
+                      <h5 class="text-white">
+                          <i class="bi-geo-alt me-2"></i>
+                          Ratchaburi, Thailand
+                      </h5>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="video-wrap">
+          <video autoplay="" loop="" muted="" class="custom-video" poster="">
+              <source src="video/final.mp4" type="video/mp4">
+          </video>
+      </div>
+  </section>
+  <!-- home -->
+
+    <!-- History -->
+<div class="container-fluid" id="scrollspyHeading2">
+  <h1 style="padding-left: 75px; padding-top: 120px; color: #0f0c3a;">History</h1>
+  <section class="carousel text-center p-3">
+      <div class="carousel__container">
+          <a class="carousel-item" href="History_Kan">
+              <img
+              class="carousel-item__img"
+              src="img/first/K1.jpeg"
+              alt=""
+              />
+              <div class="carousel-item__details">
+              <h5 class="carousel-item__details--title text-uppercase">Kanchanaburi</h5>
+              </div>
+          </a>
+
+          <a class="carousel-item" href="History_Tak">
+              <img
+              class="carousel-item__img"
+              src="img/first/T1.jpg"
+              alt=""
+              />
+              <div class="carousel-item__details">
+              <h5 class="carousel-item__details--title text-uppercase">Tak</h5>
+              </div>
+          </a>
+
+        <a class="carousel-item" href="History_Prac">
+              <img
+              class="carousel-item__img"
+              src="img/first/P1.jpg"
+              alt=""
+              />
+              <div class="carousel-item__details">
+              <h5 class="carousel-item__details--title text-uppercase">Prachuap Khiri Khan</h5>
+              </div>
+          </a>
+
+        <a class="carousel-item" href="History_Phet">
+              <img
+              class="carousel-item__img"
+              src="img/first/R1.jpg"
+              alt=""
+              />
+              <div class="carousel-item__details">
+              <h5 class="carousel-item__details--title text-uppercase">Phetchaburi</h5>
+              </div>
+          </a>
+
+          <a class="carousel-item" href="History_Rat">
+              <img
+              class="carousel-item__img"
+              src="img/first/PH1.jpg"
+              alt=""
+              />
+              <div class="carousel-item__details">
+              <h5 class="carousel-item__details--title text-uppercase">Ratchaburi</h5>
+              </div>
+          </a>
+      </div>
+    </section>
+
+</div>
+<!-- History -->
+
+<!-- TA -->
+<div class="container-fluid">
+  <h1 style="padding-top: 60px; padding-left: 75px; color: #0f0c3a;">Tourist Attractions</h1>
+  <div class="row" style="padding-left: 120px; padding-top: 50px;">
+      <div class="col-lg-4" style="padding-bottom: 60px;">
+          <div class="card p-0">
+              <div class="card-image">
+                  <img src="img/first/K2.jpg"
+                      alt="">
+              </div>
+              <div class="card-content d-flex flex-column align-items-center">
+                  <h4 class="pt-2">Kanchanaburi</h4>
+                  <a class="btn btn-1" href="travel_Kan">
+                      <span>Details</span>
+                  </a>
+              </div>
+          </div>    
+      </div>
+
+      <div class="col-lg-4" style="padding-bottom: 60px;">
+          <div class="card p-0">
+              <div class="card-image">
+                  <img src="img/first/T2.jpg"
+                      alt="">
+              </div>
+              <div class="card-content d-flex flex-column align-items-center">
+                  <h4 class="pt-2">Tak</h4>
+                  <a class="btn btn-1" href="travel_Tak">
+                      <span>Details</span>
+                  </a>
+              </div>
+          </div>    
+      </div>
+
+      <div class="col-lg-4" style="padding-bottom: 60px;">
+          <div class="card p-0">
+              <div class="card-image">
+                  <img src="img/first/P2.jpg"
+                      alt="">
+              </div>
+              <div class="card-content d-flex flex-column align-items-center">
+                  <h4 class="pt-2">Prachuap Khiri Khan</h4>
+                  <a class="btn btn-1" href="travel_Prac">
+                      <span>Details</span>
+                  </a>
+              </div>
+          </div>    
+      </div>
+  </div>
+
+  <div class="row text-center" style="padding-left: 120px; padding-bottom: 60px;">
+      <div class="col-lg-4" style="padding-bottom: 60px;">
+          <div class="card p-0">
+              <div class="card-image">
+                  <img src="img/first/PH2.jpg"
+                      alt="">
+              </div>
+              <div class="card-content d-flex flex-column align-items-center">
+                  <h4 class="pt-2">Phetchaburi</h4>
+                  <a class="btn btn-1" href="travel_Phet">
+                      <span>Details</span>
+                  </a>
+              </div>
+          </div>    
+      </div>
+
+      <div class="col-lg-4">
+          <div class="card p-0">
+              <div class="card-image">
+                  <img src="img/first/R2.jpg"
+                      alt="">
+              </div>
+              <div class="card-content d-flex flex-column align-items-center">
+                  <h4 class="pt-2">Ratchaburi</h4>
+                  <a class="btn btn-1" href="travel_Rat">
+                      <span>Details</span>
+                  </a>
+              </div>
+          </div>    
+      </div>
+
+  </div>
+</div>
+<!-- TA -->
+
+<!-- products -->
+<div class="container-fluid">
+  <h1 style="padding-left: 75px; color: #0f0c3a;">Products</h1>
+  <div class="row text-center" style="padding-top: 50px;">
+      <div class="col-lg-3">
+                  <div class="card1">
+                    <div class="wrapper">
+                        <img src="img/first/IMG_6219.JPG" class="cover-image" />
+                    </div>
+                  <img src="img/first/n1.png" class="title" />
+                  <img src="img/first/IMG_6167.PNG" class="character" />
+                  </div>
+              <div class="multi-button" style="padding-top: 30px; padding-left: 12px; color: #0f0c3a;">
+                  <a class="btn btn-2" href="https://web.facebook.com/OTOP.KANCHANABURI/?_rdc=1&_rdr">Buy</a>
+                  <a><button type="button" class="btn btn-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <a>Details</a>
+                    </button></a>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">ข้าวแต๋นน้ำเมล่อน</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            เจ้าแรกที่ทำข้าวแต๋นสูตรผลไม้ ดี๊ดีโฮมเมทขายมานานกว่า 10 ปี <br>ทำสดใหม่ตามออเดอร์ ไม่ใส่วัตถุกันเสีย ผลไม้แท้100% <br>ราคากล่องละ 35 บาท 3 กล่อง 100 บาท
+
+                          </div>
+                          <div class="modal-footer">
+                            <a href="https://web.facebook.com/OTOP.KANCHANABURI/?_rdc=1&_rdr"><button type="button" class="btn btn-6" data-bs-dismiss="modal">Buy</button></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+      </div>
+
+        <div class="col-lg-3">
+          <div class="card1">
+            <div class="wrapper">
+                <img src="img/first/IMG_6218.JPG" class="cover-image" />
+            </div>
+          <img src="img/first/n2.png" class="title" />
+          <img src="img/first/IMG_6165.PNG" class="character" />
+          </div>
+      <div class="multi-button" style="padding-top: 30px; padding-left: 12px;">
+          <a class="btn btn-2" href="https://web.facebook.com/OTOP.KANCHANABURI/?_rdc=1&_rdr">Buy</a>
+            <a><button type="button" class="btn btn-2" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+              <a>Details</a>
+            </button></a>
+
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel2">กระเป๋าใส่ IPad Tablet</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    “จันทร์เพ็ญ” ผลิตภัณฑ์แปรรูปจากผ้าขาวม้า กระเป๋าใส่ IPad Tablet ผลิตภัณฑ์แปรรูปจากผ้าขาวม้า มีช่องใส่ของด้านใน ตกแต่งซิปด้วยตุ้งติ้งผ้าขาวม้าสุดเก๋ ราคา 250 บาท
+                  </div>
+                  <div class="modal-footer">
+                    <a href="https://web.facebook.com/OTOP.KANCHANABURI/?_rdc=1&_rdr"><button type="button" class="btn btn-6" data-bs-dismiss="modal">Buy</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+</div>
+
+<div class="col-lg-3">
+  <div class="card1">
+    <div class="wrapper">
+        <img src="img/first/IMG_6228.JPG" class="cover-image" />
+    </div>
+  <img src="img/first/n3.png" class="title" />
+  <img src="img/first/IMG_6259.PNG" class="character" />
+  </div>
+<div class="multi-button" style="padding-top: 30px; padding-left: 12px;">
+  <a class="btn btn-2" href="https://web.facebook.com/profile.php?id=100037940416697&sk=photos">Buy</a>
+    <a><button type="button" class="btn btn-2" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+      <a>Details</a>
+    </button></a>
+
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel3">ผ้าโพกผม</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ผ้าโพกผมร้อยลูกปัดสีสันสดใส ราคา 120 บาท
+          </div>
+          <div class="modal-footer">
+            <a href="https://web.facebook.com/profile.php?id=100037940416697&sk=photos"><button type="button" class="btn btn-6" data-bs-dismiss="modal">Buy</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+
+<div class="col-lg-3">
+<div class="card1">
+  <div class="wrapper">
+      <img src="img/first/IMG_6232.JPG" class="cover-image" />
+  </div>
+<img src="img/first/n4.png" class="title" />
+<img src="img/first/IMG_6255.PNG" class="character" />
+</div>
+<div class="multi-button" style="padding-top: 30px; padding-left: 12px;">
+<a class="btn btn-2" href="https://web.facebook.com/profile.php?id=100037940416697&sk=photos">Buy</a>
+  <a><button type="button" class="btn btn-2" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+    <a>Details</a>
+  </button></a>
+
+  <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel4">ผ้าทอกะเหรี่ยง</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ผ้ากะเหรี่ยงทอมือ จากกลุ่มพัฒนาสตรีบ้านแม่กลองคี อ.อุ้มผาง จ.ตาก โดดเด่นด้วยงานฝีมือพิถีพิถัน ทอมือกี่เอวโบราณทุกชิ้น สามารถสั่งตัดตามความต้องการได้ ราคา 500 บาท
+        </div>
+        <div class="modal-footer">
+          <a href="https://web.facebook.com/profile.php?id=100037940416697&sk=photos"><button type="button" class="btn btn-6" data-bs-dismiss="modal">Buy</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  </div>
+
+<!-- product 2 -->
+  <div class="row text-center" style="padding-top: 50px;">
+            <div class="col-lg-3">
+                        <div class="card1">
+                          <div class="wrapper">
+                              <img src="img/first/IMG_6214.JPG" class="cover-image" />
+                          </div>
+                        <img src="img/first/n5.png" class="title" />
+                        <img src="img/first/IMG_6159.PNG" class="character" />
+                        </div>
+                    <div class="multi-button" style="padding-top: 30px; padding-left: 12px;">
+                        <a class="btn btn-2" href="https://web.facebook.com/100pancoco/?_rdc=1&_rdr">Buy</a>
+                          <a><button type="button" class="btn btn-2" data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                            <a>Details</a>
+                          </button></a>
+
+                          <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel5" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel5">ยาสีฟันธรรมชาติ</h1>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  ยาสีฟันธรรมชาติสูตรน้ำมันมะพรา้วสกัดเย็นผสมถ่านกัมมันต์ <br>ราคา 155 บาท
+                                </div>
+                                <div class="modal-footer">
+                                  <a href="https://web.facebook.com/100pancoco/?_rdc=1&_rdr"><button type="button" class="btn btn-6" data-bs-dismiss="modal">Buy</button></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+            </div>
+
+          <div class="col-lg-3">
+                <div class="card1">
+                  <div class="wrapper">
+                      <img src="img/first/IMG_6235.JPG" class="cover-image" />
+                  </div>
+                <img src="img/first/n6.png" class="title" />
+                <img src="img/first/IMG_6252.PNG" class="character" />
+                </div>
+                  <div class="multi-button" style="padding-top: 30px; padding-left: 12px;">
+                      <a class="btn btn-2" href="https://web.facebook.com/100064569233977/posts/pfbid02nQvf6MYzUtGLtvR6rZqBatSxnrnLiWRPXV7GkqH7d778VeBsyS4DoHV2teJ4PjUml/?mibextid=cr9u03&_rdc=1&_rdr">Buy</a>
+                        <a><button type="button" class="btn btn-2" data-bs-toggle="modal" data-bs-target="#exampleModal6">
+                          <a>Details</a>
+                        </button></a>
+                                  <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel6" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h1 class="modal-title fs-5" id="exampleModalLabel6">ไพรหอม</h1>
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                          ไพรหอม สบู่สมุนไพร ราคา 35 บาท
+                                        </div>
+                                        <div class="modal-footer">
+                                          <a href="https://web.facebook.com/100064569233977/posts/pfbid02nQvf6MYzUtGLtvR6rZqBatSxnrnLiWRPXV7GkqH7d778VeBsyS4DoHV2teJ4PjUml/?mibextid=cr9u03&_rdc=1&_rdrhttps://web.facebook.com/100064569233977/posts/pfbid02nQvf6MYzUtGLtvR6rZqBatSxnrnLiWRPXV7GkqH7d778VeBsyS4DoHV2teJ4PjUml/?mibextid=cr9u03&_rdc=1&_rdr"><button type="button" class="btn btn-6" data-bs-dismiss="modal">Buy</button></a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                  </div>
+          </div>
+
+        <div class="col-lg-3">
+                <div class="card1">
+                      <div class="wrapper">
+                          <img src="img/first/IMG_6242.JPG" class="cover-image" />
+                      </div>
+                    <img src="img/first/n7.png" class="title" />
+                    <img src="img/first/IMG_6245.PNG" class="character" />
+                </div>
+                      <div class="multi-button" style="padding-top: 30px; padding-left: 12px;">
+                          <a class="btn btn-2" href="https://web.facebook.com/tusnee.eiumsaard?_rdc=1&_rdr">Buy</a>
+                        <a><button type="button" class="btn btn-2" data-bs-toggle="modal" data-bs-target="#exampleModal7">
+                          <a>Details</a>
+                        </button></a>
+                              <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel7" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h1 class="modal-title fs-5" id="exampleModalLabel3">หมอนฟักทอง</h1>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      หมอนฟักทอง กลุ่มอาชีพหมอนฟักทองแฮนเมค บ้านน้อย จะใช้หนุนนอนก็ฟิน จะใช้พิงหรืออิงก็ใช่ (สามารถเลือกลายสินค้าและขนาดของสินค้าได้) ราคา 500 บาท
+                                    </div>
+                                    <div class="modal-footer">
+                                      <a href="https://web.facebook.com/tusnee.eiumsaard?_rdc=1&_rdr"><button type="button" class="btn btn-6" data-bs-dismiss="modal">Buy</button></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                      </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="card1">
+              <div class="wrapper">
+                <img src="img/first/IMG_6243.JPG" class="cover-image" />
+              </div>
+          <img src="img/first/n8.png" class="title" />
+          <img src="img/first/IMG_6244.PNG" class="character" />
+          </div>
+              <div class="multi-button" style="padding-top: 30px; padding-left: 12px;">
+              <a class="btn btn-2" href="https://web.facebook.com/profile.php?id=100037940416697&sk=photos">Buy</a>
+
+              <a><button type="button" class="btn btn-2" data-bs-toggle="modal" data-bs-target="#exampleModal8">
+                <a>Details</a>
+              </button></a>
+                      <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel8" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel8">ป้อนคำหวาน อาลัวจิ๋ว</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              ป้อนคำหวาน อาลัวจิ๋ว สูตรดั้งเดิม อร่อยเพลินพอดีคำ กระปุกจิ๋วพกพาง่าย ราคา 65 บาท
+                            </div>
+                            <div class="modal-footer">
+                              <a href="https://web.facebook.com/profile.php?id=100037940416697&sk=photos">
+                                <button type="button" class="btn btn-6" data-bs-dismiss="modal">Buy</button></a>
+                            </div>
+                        </div>
+                      </div>
+                      </div>
+              </div>
+        </div>
+
+  </div> 
+  <!-- end row 2 -->
+
+
+  <div class="row text-center" style="padding-top: 50px;">
+        <div class="col-md-5">&nbsp;</div>
+
+        <div class="col-md-2">
+          <a href="/product"><button class="btn-7">MORE</button></a>
+        </div>
+        
+        <div class="col-md-5">&nbsp;</div>
+  </div>
+  <!-- end row 3 -->
+</div>
+<!-- products -->
+
+    <div class="space1"></div><br>
+    <h6>&copy; Western Thailand</h6>
+
+<!-- Footer -->
+<footer class="text-center text-white" style="background-color: #0f0c3a;">
+  <div class="container">
+    <section class="mt-5">
+      <div class="row d-flex pt-3">
+                  <div class="col-md-2">
+                    <hr class="hr-1">
+                    <h5 class="text-uppercase font-weight-bold text-center">
+                      <a href="/home" class="text-white" style="text-decoration: none;">Home</a>
+                    </h5>
+                    <hr class="hr-1">
+                  </div>
+
+                  <div class="col-md-3">
+                    <hr class="hr-1">
+                    <h5 class="text-uppercase font-weight-bold text-center">
+                      <a href="#" class="text-white" style="text-decoration: none;">History</a>
+                    </h5>
+                    <hr class="hr-1">
+                    <h6 class="text-uppercase text-center">
+                      <a href="History_Kan" class="text-white" style="text-decoration: none;">Kanchanaburi</a>
+                      <br>
+                      <br>
+                          <a href="History_Tak" class="text-white" style="text-decoration: none;">Tak</a>
+                      <br>
+                      <br>
+                          <a href="History_Prac" class="text-white" style="text-decoration: none;">Prachuap Khiri Khan</a>
+                      <br>
+                      <br>
+                          <a href="History_Phet" class="text-white" style="text-decoration: none;">Phetchaburi</a>
+                      <br>
+                      <br>
+                          <a href="History_Rat" class="text-white" style="text-decoration: none;">Ratchaburi</a>
+                        </h6>
+                  </div>
+
+                <div class="col-md-3">
+                  <hr class="hr-1">
+                  <h5 class="text-uppercase font-weight-bold text-center">
+                    <a href="#" class="text-white" style="text-decoration: none;">Tourist Attractions</a>
+                  </h5>
+                  <hr class="hr-1">
+                  <h6 class="text-uppercase text-center">
+                    <a href="Travel_Kan" class="text-white" style="text-decoration: none;">Kanchanaburi</a>
+                    <br>
+                    <br>
+                        <a href="Travel_Tak" class="text-white" style="text-decoration: none;">Tak</a>
+                    <br>
+                    <br>
+                        <a href="Travel_Prac" class="text-white" style="text-decoration: none;">Prachuap Khiri Khan</a>
+                    <br>
+                    <br>
+                        <a href="Travel_Phet" class="text-white" style="text-decoration: none;">Phetchaburi</a>
+                    <br>
+                    <br>
+                        <a href="Travel_Rat" class="text-white" style="text-decoration: none;">Ratchaburi</a>
+                      </h6>
+                </div>
+
+                <div class="col-md-2">
+                  <hr class="hr-1">
+                  <h5 class="text-uppercase font-weight-bold text-center">
+                    <a href="/product" class="text-white" style="text-decoration: none;">Products</a>
+                  </h5>
+                  <hr class="hr-1">
+                </div>
+
+                <div class="col-md-2">
+                  <hr class="hr-1">
+                  <h5 class="text-uppercase font-weight-bold text-center">
+                    <a href="/contact" class="text-white" style="text-decoration: none;">Contact Us</a>
+                  </h5>
+                  <hr class="hr-1">
+                </div>
+
+      </div>
+    </section>
+
+    <hr class="my-5">
+    <section class="mb-3">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <p>
+            Website introducing tourist attractions in the western region of Thailand.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div
+       class="text-center p-3"
+       style="background-color: rgba(0, 0, 0, 0.2)"
+       >
+    © 2023 Copyright:
+    <a class="text-white" href="/home"
+       >tiewtok.com</a>
+  </div>
+</footer>
+<!-- Footer -->
+
+    <script src="/js/navbar.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feadback Access</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="/css/fb_style.css">
+
+</head>
+<body>
+
+    <div style="height: 100px;"></div>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/79024/lock-icon-clipart-lg.png" alt="">
+        </div>
+        <div class="text-center mt-4 name">
+            User Feedback <br> Access
+        </div>
+        <form action="feedback_data" method="post" class="p-3 mt-3">
+            <div class="form-field d-flex align-items-center">
+                <span class="far fa-user"></span>
+                <input type="text" name="user" id="userName" placeholder="Username" required>
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-key"></span>
+                <input type="password" name="pass" id="pwd" placeholder="Password" required>
+            </div>
+            <button class="btn mt-3">Access</button>
+        </form>
+        <div class="text-center fs-6">
+            <br><a href="#" onclick="showAlert()">Don't know password?</a>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    function showAlert() {
+        alert('ข้อมูลต่อไปนี้ เป็นข้อมูลสำหรับทีมผู้พัฒนาเท่านั้น\nหากคุณต้องการรหัสผ่านในการเข้าถึง กรุณาติดต่อทีมผู้พัฒนา');
+    }
+</script>
+
+</html>

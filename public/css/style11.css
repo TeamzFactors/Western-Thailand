@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+/* Reset Password Page */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --first-color: #303ef7;
+    --second-color: hsl(208, 87%, 82%);
+    --third-color: #e92929;
+}
+
+body {
+    background-color: var(--second-color);
+    font-family: 'Poppins';
+}
+
+.img1 {
+    width: 16%;
+    margin-top: 25px;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 40px;
+    text-shadow: 1px 1px 1px #e92929;
+}
+
+.g1, .g2 {
+    text-align: center;
+    margin-top: 45px;
+    font-size: 14pt;
+}
+
+#newPassword, #confirmPassword {
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 200px; /* Set a maximum width for larger screens */
+    margin: 0 auto; /* Center the input fields */
+}
+
+.btn2 {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    border: 2px solid #e92929;
+    color: #e92929;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    margin-top: 50px;
+    background-color: #fff;
+}
+
+.btn2:hover {
+    background: var(--third-color);
+    color: #fff;
+}

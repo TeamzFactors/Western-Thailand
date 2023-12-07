@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+/* Forget Password Page */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --first-color: #303ef7;
+    --second-color: hsl(208, 87%, 82%);
+    --third-color: #e92929;
+}
+
+body {
+    background-color: var(--second-color);
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 40px;
+    font-family: 'Poppins';
+    text-shadow: 1px 1px 1px #e92929;
+}
+
+.img1 {
+    width: 16%;
+    margin-top: 20px;
+}
+
+.f1 {
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Poppins';
+    font-size: 14pt;
+}
+
+#email {
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px; /* Set a maximum width for larger screens */
+    margin: 0 auto; /* Center the input fields */
+    margin-bottom: 40px;
+    font-family: 'Poppins';
+}
+
+.btn1 {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    border: 2px solid #303ef7;
+    color: #303ef7;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    font-family: 'Poppins';
+    background-color: #fff;
+}
+
+.btn1:hover {
+    background: var(--first-color);
+    color: #fff;
+}
+
+.btn2 {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    border: 2px solid #e92929;
+    color: #e92929;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    margin-top: 25px;
+    font-family: 'Poppins';
+    background-color: #fff;
+}
+
+.btn2:hover {
+    background: var(--third-color);
+    color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+    /* Apply styles for larger screens */
+    h1 {
+        font-size: 2em; /* Adjust font size for larger screens */
+    }
+
+    .btn1, .btn2 {
+        display: inline-block; /* Display buttons inline for larger screens */
+    }
+}

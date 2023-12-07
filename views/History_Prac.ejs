@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ความเป็นมา จังหวัดประจวบคีรีขันธ์</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="/css/history.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- navbar -->
+  <div class="p-3 text-white" style="background-color: #0f0c3a;">
+    <div class="flexMain">
+      <div class="flex2 text-center">
+        <div><strong>Website introducing tourist attractions in the western region of Thailand.</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flexMain sticky-top" style="background-color: rgb(255, 255, 255); border-bottom: #0f0c3a; border-bottom-style: solid; border-bottom-width: 0.8px;">
+    <div class="flex2">
+      <button class="btn siteLink" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" 
+      aria-controls="offcanvasExample" >
+        <i class="fas fa-bars me-2" style="color: #0f0c3a;"></i>MENU
+      </button>
+    </div>
+    <div class="flex3 text-center" id="siteBrand">
+      <a href="/home" style="text-decoration: none; color: #0f0c3a;">
+          <h2>TIEWTOK</h2></a>
+    </div>
+    <div class="flex2 text-end d-md-block ">
+      <a href="/login"><button class="whiteLink siteLink">PROFILE</button></a>
+        <a href="/logout"><button class="blackLink siteLink">LOG OUT</button></a>
+      </div>
+  </div>
+  
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header" style="margin-top: 20px; margin-left: 20px; margin-right: 30px;">
+      <a class="offcanvas-title" id="offcanvasExampleLabel"><img src="/img/first/logo.png" class="offcanvas-title" id="offcanvasExampleLabel" width="80px" height="80px" style="border-radius: 60px;"></a>
+      <button type="button" class="btn-close text-reset" style="font-size:large" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <a href="/home" class="btn nav-menu-item text-start" style="font-weight:bold;"><i class="me-3"></i>Home</a>
+
+
+            <a class="btn nav-menu-item text-start" style="padding-left: 47px; font-weight:bold;" data-bs-toggle="collapse" 
+          href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">History <i class="fa-solid fa-caret-down"></i></a>
+
+         <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="/History_Kan">
+              ●  Kanchanaburi
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="History_Tak">
+              ●  Tak
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="History_Prac">
+              ●  Prachuap Khiri Khan
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="History_Phet">
+              ●  Phetchaburi
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="History_Rat">
+              ●  Ratchaburi
+            </a>
+         </div>
+
+          <a class="btn nav-menu-item text-start" style="padding-left: 47px; font-weight:bold;" data-bs-toggle="collapse" 
+         href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">Tourist Attractions <i class="fa-solid fa-caret-down"></i></a>
+
+          <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="travel_Kan">
+              ●  Kanchanaburi
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="travel_Tak">
+              ●  Tak
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="travel_Prac">
+              ●  Prachuap Khiri Khan
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="travel_Phet">
+              ●  Phetchaburi
+            </a>
+            <a class="card-body nav-menu-item" style="padding-left: 60px;" href="travel_Rat">
+              ●  Ratchaburi
+            </a>
+          </div>
+
+            <a href="/product" class="btn nav-menu-item text-start" style="font-weight:bold;"><i class="me-3"></i>Products</a>
+            <a href="/contact" class="btn nav-menu-item text-start" style="font-weight:bold;"><i class="me-3"></i>Contact Us</a>
+    </div>
+  </div>
+  <!-- navbar -->
+
+    <!-- Title -->
+    <div style="height: 50px;"></div>
+    <div class="wrapper">
+        <h1 class="d-none d-sm-block">ประวัติความเป็นมา</h1>
+    </div>
+    <div class="wrapper_sm">
+        <h1 class="d-block d-sm-none">ประวัติความเป็นมา</h1>
+    </div>
+
+    <!-- History -->
+    <div style="height: 50px;"></div>
+    <div class="h1 text-center fw-bolder"> <%= row.pname %> </div>
+    <div class="h5 mx-3 text-center"> <%= row.slogan %> </div>
+    <div style="height: 50px;"></div>
+
+    <!-- Timeline -->
+    <section>
+        <div class="container">
+            <div class="row" >
+                <div class="history-wrapper">
+                    <div class="title-wrap text-center one-of-two">
+                        <h2 class="h1 text-secondary mb-0 text-uppercase">History</h2>
+                        <p class="fs-3 font-weight-500">Let's get to know Prachuap Khiri Khan Province.</p>
+                    </div>
+                    <div class="timeline-box one-of-two">
+                        <img class="mb-1-6 rounded img-fluid hover-rotate" src="/img_his/pr1.png" width="200px" alt="...">
+                        <div class="content">
+                            <h3 class="h4 mb-2 mb-md-3">ที่ตั้งและความสำคัญ</h3>
+                            <p class="mb-0">จังหวัดประจวบคีรีขันธ์ ตั้งอยู่ทางภาคตะวันตกของประเทศไทย มีชายฝั่งทะเลทรายที่สวยงามและน้ำทะเลสีฟ้าครามที่สดใส นอกจากนี้ยังมีพิพิธภัณฑ์และศูนย์เรียนรู้และสำรวจท้องทะเลที่สำคัญของประเทศไทย ที่นี่เป็นที่พักผ่อนที่มีความเงียบสงบและบรรยากาศที่ทั้งธรรมชาติที่สวยงามเหมาะแก่การพักผ่อน และผู้คนที่ใจดีเป็นมิตร</p>
+                        </div>
+                        <div class="year">#1</div>
+                    </div>
+                    <div class="timeline-box one-of-two">
+                        <img class="mb-1-6 rounded img-fluid hover-rotate2" src="/img_his/pr2.png" width="400px" alt="...">
+                        <div class="content">
+                            <h3 class="h4 mb-2 mb-md-3">สมัยกรุงศรีอยุธยา</h3>
+                            <p class="mb-0">เมื่อพระเจ้าอู่ทองได้สถาปนากรุงศรีอยุธยาเป็นราชธานีในปี พ.ศ.1693 ดินแดนอันเป็นที่ตั้งของจังหวัดประจวบคีรีขันธ์ในปัจจุบัน ได้อยู่ภายใต้การปกครองของอยุธยาด้วย เดิมทีจังหวัดประจวบคีรีขันธ์มีชื่อเรียกว่า “เมืองบางนางรม” หรือ “เมืองนารัง” ในสมัยพระเจ้าเอกทัศน์แห่งกรุงศรีอยุธยาพม่าได้ยกทัพมาล้อมกรุงศรีอยุธยา เมื่อพม่าตีกรุงศรีอยุธยาได้เมืองบางนารมนี้ก็ได้เลิกร้างไป ประชาชนอพยพไปอยู่ในเมืองอื่น ๆ เพราะกลัวว่าพม่าจะมารุกรานอีก</p>
+                        </div>
+                        <div class="year">#2</div>
+                    </div>
+                    <div class="timeline-box one-of-two">
+                        <img class="mb-1-6 rounded img-fluid hover-rotate" src="/img_his/pr3.png" width="400px" alt="...">
+                        <div class="content">
+                            <h3 class="h4 mb-2 mb-md-3">สมัยกรุงธนบุรี</h3>
+                            <p class="mb-0">เป็นระยะเพียงสั้น ๆ ซึ่งขณะนั้นเมืองบางนางรมยังร้างอยู่ แต่อย่างไรก็ตาม เมืองบางนางรมก็ยังคงเป็นทางเดินทัพของพม่าที่เข้ามายังไทยอีก ดังที่กล่าวแล้วว่า สมัยกรุงธนบุรีเป็นช่วงการปกครองที่สั้นมาก ดังนั้นการเดินทัพของพม่าที่ผ่านไปมาทางเมืองบางนางรมจึงมีเรื่องราวปรากฏอยู่ไม่มากนัก</p>
+                        </div>
+                        <div class="year">#3</div>
+                    </div>
+                    <div class="timeline-box one-of-two">
+                        <img class="mb-1-6 rounded img-fluid hover-rotate2" src="/img_his/pr4.jpeg" width="400px" alt="...">
+                        <div class="content">
+                            <h3 class="h4 mb-2 mb-md-3">สมัยต้นรัตนโกสินทร์ตอนต้น</h3>
+                            <p class="mb-0">ในสมัยรัชกาลที่ 1 พระองค์เคยส่งกองทัพมาทางเมืองบางนางรมผ่านไปทางด่านสิงขร เพื่อยกทัพไปตีเมืองเมาะตะมะและเมืองร่างกุ้ง ขณะนั้นเมืองบางนางรมยังร้างผู้คนอยู่
+                                ต่อมาในสมัยรัชกาลที่ 2 ทรงเห็นว่าเมืองบางนางรมที่ยังร้างอยู่เพราะผู้คนเกรงกลัวภัยสงคราม จึงได้โปรดให้ตั้งเมืองขึ้นใหม่ที่ปากคลองบางนางรม แต่สภาพพื้นดินในตอนนี้นั้นไม่เหมาะต่อการประกอบอาชีพ จึงได้ย้ายที่ทำการจากปากคลองบางนางรมไปตั้งที่เมืองกุย ซึ่งมีความอุดมสมบูรณ์มากกว่า
+                            </p>
+                        </div>
+                        <div class="year">#4</div>
+                    </div>
+                    <div class="timeline-box one-of-two">
+                        <img class="mb-1-6 rounded img-fluid hover-rotate" src="/img_his/pr5.jpeg" width="400px" alt="...">
+                        <div class="content">
+                            <h3 class="h4 mb-2 mb-md-3">สมัยรัชกาลที่ 4</h3>
+                            <p class="mb-0">ได้ทรงพระกรุณาโปรดเกล้าให้รวมท้องที่เมืองกุยบางส่วน เมืองคลองวาฬ และเมืองบางนางรม เข้าด้วยกัน ตั้งเป็นเมืองใหม่แล้วพระราชทานนามว่า “เมืองประจวบคีรีขันธ์” ซึ่งในสมัยนั้น เมืองประจวบคีรีขันธ์มีชื่อเสียงโด่งดังไปทั่วโลก เพราะด้วยการคำนวณด้วยตำราดาราศาสตร์ของรัชกาลที่ 4 ว่าจะเกิดสุริยุปราคาเต็มดวง ซึ่งจะมองเห็นได้ชัดเจนตรงบ้านหว้ากอ เขตเมืองประจวบคีรีขันธ์ และได้เชิญชาวต่างชาติมาดู เมื่อถึงวันที่ได้พยากรณ์ไว้ก็เกิดสุริยุปราคาจริงๆ</p>
+                        </div>
+                        <div class="year">#5</div>
+                    </div>
+                    <div class="timeline-box one-of-two">
+                        <img class="mb-1-6 rounded img-fluid hover-rotate2" src="/img_his/pr6.jpeg" width="400px" alt="...">
+                        <div class="content">
+                            <h3 class="h4 mb-2 mb-md-3">สมัยรัชกาลที่ 5</h3>
+                            <p class="mb-0">ทรงโปรดให้จัดการปกครองท้องที่ เป็นมณฑลเทศาภิบาล พร้อมกับให้ยุบเมืองประจวบคีรีขันธ์ลงเป็นอำเภอขึ้นอยู่กับเมืองเพชรบุรี เพราะทรงเห็นว่าเมืองประจวบคีรีขันธ์เป็นเมืองเล็ก แต่พอหลังจากนั้น ได้โปรดให้รวมอำเภอเมืองประจวบคีรีขันธ์ อำเภอปราณบุรี ซึ่งขึ้นอยู่กับเมืองเพชรบุรีรวมกับอำเภอกำเนิดนพคุณ ซึ่งขึ้นอยู่กับเมืองชุมพร ตั้งขึ้นเป็นเมือง ปราณบุรี เพื่อรักษาชื่อเมืองปราณบุรีไว้</p>
+                        </div>
+                        <div class="year">#6</div>
+                    </div>
+                    <div class="timeline-box one-of-two">
+                        <img class="mb-1-6 rounded img-fluid hover-rotate" src="/img_his/pr7.png" width="400px" alt="...">
+                        <div class="content">
+                            <h3 class="h4 mb-2 mb-md-3">รัชกาลที่ 6 จนถึงปัจจุบัน</h3>
+                            <p class="mb-0">ทรงมีพระราชดำริว่า เมืองโบราณชื่อไม่ตรงกับสถานที่ตั้งเดิม เช่น เมืองปราณบุรีตั้งที่เกาะหลัก กับเมืองปราณที่ตั้งอยู่ริมคลองปราณ นานไปจะเกิดความสับสนทางประวัติศาสตร์ จึงโปรดเก้าให้เปลี่ยนชื่อเมืองปราณบุรีที่เกาะหลักเป็น “เมืองประจวบคีรีขันธ์” เมื่อวันที่ 16 สิงหาคม พ.ศ.2458 และได้ใช้ชื่อนี้มาจนกระทั่งทุกวันนี้</p>
+                        </div>
+                        <div class="year">#7</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- ------------------------------------------------------------------------------------------------------------------------------- -->  
+  <div style="height: 70px;"></div>
+  <!-- ------------------------------------------------------------------------------------------------------------------------------- -->
+
+  <!-- Do you know? -->
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+
+        <div class="col-lg-7">
+
+            <div class="h4">เรื่องน่ารู้ของจังหวัดประจวบคีรีขันธ์</div><br>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-body-tertiary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      <b>ชายหาดที่งดงาม</b>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">ประจวบคีรีขันธ์มีชายหาดที่สวยงามอย่างหาดหัวหิน ซึ่งเป็นหนึ่งในที่ท่องเที่ยวที่ดังและมีชื่อเสียงของประเทศไทย นอกจากนี้ยังมีหาดอื่น ๆ เช่น หาดทรายทอง หรือหาดบางสะพานทอง ที่มีทรัพยากรทะเลที่สวยงามและกิจกรรมทางทะเลมากมายสำหรับนักท่องเที่ยว</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-body-tertiary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      <b>สิ่งแวดล้อมทางธรรมชาติ</b>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">นอกจากชายหาดที่สวยงาม จังหวัดนี้ยังมีอุทยานแห่งชาติและพื้นที่อื่น ๆ ที่เป็นที่ตั้งของป่าชายเลนที่รวบรวมสัตว์ป่าต่าง ๆ และมีความหลากหลายทางธรรมชาติที่น่าสนใจในการสังเกตการณ์</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-body-tertiary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      <b>ที่ท่องเที่ยวเชิงวัฒนธรรม</b>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">นอกจากสิ่งแวดล้อมธรรมชาติที่งดงาม ประจวบคีรีขันธ์ยังมีสถานที่ท่องเที่ยวเชิงวัฒนธรรม เช่น พิพิธภัณฑ์แหลมเทียนที่นำเสนอประวัติศาสตร์และวัฒนธรรมท้องถิ่นของจังหวัดนี้</div>
+                  </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+  </div>
+
+  <!-- Map -->
+  <br><br>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999807.9352241671!2d98.93056241592178!3d11.8002313079669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30fe840f6be34d7f%3A0xf3545b6a73b47bca!2z4Lib4Lij4Liw4LiI4Lin4Lia4LiE4Li14Lij4Li14LiC4Lix4LiZ4LiY4LmM!5e0!3m2!1sth!2sth!4v1700843685025!5m2!1sth!2sth" style="border:0; width: 100%; height: 400px; margin-bottom: -7px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  <h6 style="text-align: center; color: rgb(155, 154, 154); margin-top: 60px;">&copy; Western Thailand</h6>
+
+  <!-- Footer -->
+  <footer class="text-center text-white" style="background-color: #0f0c3a;">
+    <div class="container">
+      <section class="mt-5">
+        <div class="row d-flex pt-3">
+                    <div class="col-md-2">
+                      <hr class="hr-1">
+                      <h5 class="text-uppercase font-weight-bold text-center">
+                        <a href="/home" class="text-white" style="text-decoration: none;">Home</a>
+                      </h5>
+                      <hr class="hr-1">
+                    </div>
+
+                    <div class="col-md-3">
+                      <hr class="hr-1">
+                      <h5 class="text-uppercase font-weight-bold text-center">
+                        <a href="#" class="text-white" style="text-decoration: none;">History</a>
+                      </h5>
+                      <hr class="hr-1">
+                      <h6 class="text-uppercase text-center">
+                        <a href="History_Kan" class="text-white" style="text-decoration: none;">Kanchanaburi</a>
+                        <br>
+                        <br>
+                            <a href="History_Tak" class="text-white" style="text-decoration: none;">Tak</a>
+                        <br>
+                        <br>
+                            <a href="History_Prac" class="text-white" style="text-decoration: none;">Prachuap Khiri Khan</a>
+                        <br>
+                        <br>
+                            <a href="History_Phet" class="text-white" style="text-decoration: none;">Phetchaburi</a>
+                        <br>
+                        <br>
+                            <a href="History_Rat" class="text-white" style="text-decoration: none;">Ratchaburi</a>
+                          </h6>
+                    </div>
+
+                  <div class="col-md-3">
+                    <hr class="hr-1">
+                    <h5 class="text-uppercase font-weight-bold text-center">
+                      <a href="#" class="text-white" style="text-decoration: none;">Tourist Attractions</a>
+                    </h5>
+                    <hr class="hr-1">
+                    <h6 class="text-uppercase text-center">
+                      <a href="Travel_Kan" class="text-white" style="text-decoration: none;">Kanchanaburi</a>
+                      <br>
+                      <br>
+                          <a href="Travel_Tak" class="text-white" style="text-decoration: none;">Tak</a>
+                      <br>
+                      <br>
+                          <a href="Travel_Prac" class="text-white" style="text-decoration: none;">Prachuap Khiri Khan</a>
+                      <br>
+                      <br>
+                          <a href="Travel_Phet" class="text-white" style="text-decoration: none;">Phetchaburi</a>
+                      <br>
+                      <br>
+                          <a href="Travel_Rat" class="text-white" style="text-decoration: none;">Ratchaburi</a>
+                        </h6>
+                  </div>
+
+                  <div class="col-md-2">
+                    <hr class="hr-1">
+                    <h5 class="text-uppercase font-weight-bold text-center">
+                      <a href="/product" class="text-white" style="text-decoration: none;">Products</a>
+                    </h5>
+                    <hr class="hr-1">
+                  </div>
+
+                  <div class="col-md-2">
+                    <hr class="hr-1">
+                    <h5 class="text-uppercase font-weight-bold text-center">
+                      <a href="/contact" class="text-white" style="text-decoration: none;">Contact Us</a>
+                    </h5>
+                    <hr class="hr-1">
+                  </div>
+
+        </div>
+      </section>
+
+      <hr class="my-5">
+      <section class="mb-3">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <p>
+              Website introducing tourist attractions in the western region of Thailand.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div
+         class="text-center p-3"
+         style="background-color: rgba(0, 0, 0, 0.2)"
+         >
+      © 2023 Copyright:
+      <a class="text-white" href="/home"
+         >tiewtok.com</a>
+    </div>
+  </footer>
+  <!-- Footer -->
+
+</body>
+</html>
